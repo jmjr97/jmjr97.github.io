@@ -1,12 +1,21 @@
 body{
 	background-color: #2e333f;
 	background-repeat: no-repeat;
-	min-height: 75vh;
+}
+
+a{
+	text-decoration: none;
 }
 
 h2{
 	color: #acb4c2;
 	text-align: center;
+}
+
+h3{
+	color: #acb4c2;
+	text-align: center;
+	margin: 2px;
 }
 
 .mainImg {
@@ -24,6 +33,15 @@ h2{
 	overflow: hidden;
 	display: grid;
 	box-shadow: -1px -1px;
+}
+
+.mainDivPadding{
+	padding: 5px;
+}
+
+.mainDivPaddingBottom{
+	padding: 5px;
+	padding-top: 0px;
 }
 
 .divButton{
@@ -46,11 +64,27 @@ h2{
 	box-shadow: 1px 1px;
 }
 
-.mainDivPadding{
-	padding: 5px;
+.divLinks{
+	width: 310px;
+	display: block;
+	float: left;
 }
 
-.mainDivPaddingBottom{
-	padding: 5px;
-	padding-top: 0px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
