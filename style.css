@@ -1,3 +1,9 @@
+/*@font-face {
+	font-family: 'Nerd Font';
+	src: url(fonts/Hack-Bold-Nerd-Font-Complete.ttf);
+}*/
+
+
 body{
 	background-color: #2e333f;
 	background-repeat: no-repeat;
@@ -18,6 +24,28 @@ h3{
 	margin: 2px;
 }
 
+.dateTime{
+	margin: auto;
+	font-size: 16px;
+	text-align: center;
+	padding: 24px;
+	color: white;
+	background-color: #252933;
+	border-radius: 5px;
+	box-shadow: -1px -1px black;
+	width: 300px;
+	font-family: 'Inter', sans-sarif;
+	font-weight: 500;
+}
+
+.time{
+	font-size: 3em;
+}
+
+.date{
+
+}
+
 .mainImg {
 	margin: 10px;
 	width: 200px;
@@ -32,7 +60,7 @@ h3{
 	border-radius: 5px;
 	overflow: hidden;
 	display: grid;
-	box-shadow: -1px -1px;
+	box-shadow: -1px -1px black;
 }
 
 .mainDivPadding{
@@ -51,7 +79,7 @@ h3{
 	background-color: #2e333f;
 	float: left;
 	display: block;
-	box-shadow: 1px 1px;
+	box-shadow: 1px 1px black;
 }
 .divButtonBottom{
 	margin: 5px;
@@ -61,13 +89,15 @@ h3{
 	background-color: #2e333f;
 	float: left;
 	display: block;
-	box-shadow: 1px 1px;
+	box-shadow: 1px 1px black;
 }
 
 .divLinks{
 	width: 310px;
 	display: block;
 	float: left;
+	font-family: 'Nerd Font', sans-serif;
+	font-weight: 400;
 }
 
 
