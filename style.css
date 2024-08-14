@@ -5,7 +5,8 @@
 
 
 body{
-	background-color: #2e333f;
+	/* background-color: #2e333f; */
+    background-color: #1a1b26;
 	background-repeat: no-repeat;
 }
 
@@ -31,7 +32,8 @@ h3{
 	text-align: center;
 	padding: 24px;
 	color: white;
-	background-color: #252933;
+	background-color: #282a3d;
+	/* background-color: #252933; */
 	border-radius: 5px;
 	box-shadow: -1px -1px black;
 	width: 300px;
@@ -57,7 +59,8 @@ h3{
 .mainDiv{
 	margin: auto;
 	width: 930px;
-	background-color: #252933;
+	/* background-color: #252933; */
+	background-color: #282a3d;
 	border-radius: 5px;
 	overflow: hidden;
 	display: grid;
@@ -83,7 +86,8 @@ h3{
 	margin: 5px;
 	width: fit-content;
 	border-radius: 5px;
-	background-color: #2e333f;
+	background-color: #1a1b26;
+	/* background-color: #2e333f; */
 	float: left;
 	display: block;
 	box-shadow: 1px 1px black;
@@ -93,7 +97,8 @@ h3{
 	margin-top: 0px;
 	width: fit-content;
 	border-radius: 5px;
-	background-color: #2e333f;
+	background-color: #1a1b26;
+	/* background-color: #2e333f; */
 	float: left;
 	display: block;
 	box-shadow: 1px 1px black;
