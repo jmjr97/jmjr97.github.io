@@ -64,6 +64,16 @@ h3{
 	box-shadow: -1px -1px black;
 }
 
+.mainDivSmall{
+	margin: auto;
+	width: 470px;
+	background-color: #282a3d;
+	border-radius: 5px;
+	overflow: hidden;
+	display: grid;
+	box-shadow: -1px -1px black;
+}
+
 .mainDivPadding{
 	padding: 5px;
 }
