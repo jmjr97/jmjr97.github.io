@@ -1,0 +1,92 @@
+body {
+  background-color: #1a1b26;
+}
+
+h1 {
+  color: #f7f7f7;
+}
+
+.container {
+  text-align: center;
+  margin: 0 auto;
+  width: 400px;
+  background-color: #1a1b26;
+}
+
+#playerInput {
+  margin: 5px 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#playerInput:focus {
+  outline: none;
+}
+
+#addPlayer {
+  background-color: #7aa2f7;
+  color: white;
+  border: none;
+  /* padding: 5px 10px; */
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.roll {
+  margin: 5px 0;
+  display: flex;
+  width: 20px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #f7f7f7;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.roll:focus {
+  outline: none;
+}
+
+.playerName[disabled] {
+  margin: 5px 0;
+  display: flex;
+  width: 60%;
+  /* justify-content: space-between; */
+  align-items: center;
+  color: black;
+  background-color: #f7f7f7;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.delete {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
