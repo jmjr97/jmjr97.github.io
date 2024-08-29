@@ -1,26 +1,40 @@
+:root {
+  --clr-bg: #1a1b26;
+  --clr-light: #f7f7f7;
+  --clr-blue: #3333ff;
+  --clr-lightblue: #3366ff;
+  --clr-red: #cc0000;
+  --clr-lightgrey: #b0b0b0;
+  --clr-grey: #808080;
+  --clr-darkgrey: #555555;
+  --clr-darkergrey: #333333;
+  --clr-black: #000000;
+}
+
 body {
   background-color: #1a1b26;
 }
 
 h1 {
-  color: #f7f7f7;
+  color: var(--clr-light);
 }
 
 .container {
   text-align: center;
   margin: 0 auto;
   width: 400px;
-  background-color: #1a1b26;
+  background-color: var(--clr-bg);
 }
 
 #playerInput {
   margin: 5px 0;
   justify-content: space-between;
   align-items: center;
-  background-color: #f7f7f7;
+  width: 250px;
+  background-color: var(--clr-light);
   padding: 8px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid var(--clr-black);
 }
 
 #playerInput:focus {
@@ -28,14 +42,27 @@ h1 {
 }
 
 #addPlayer {
-  background-color: #7aa2f7;
+  background-color: var(--clr-blue);
   color: white;
   border: none;
+  width: 100px;
   /* padding: 5px 10px; */
   padding: 8px;
   border-radius: 5px;
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid var(--clr-black);
+}
+
+#clearTurn {
+  background-color: var(--clr-red);
+  color: white;
+  border: none;
+  width: 200px;
+  /* padding: 5px 10px; */
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid var(--clr-black);
 }
 
 ul {
@@ -51,18 +78,54 @@ li {
   background-color: #f7f7f7;
   padding: 8px;
   border-radius: 5px;
+  border: 1px solid var(--clr-black);
+}
+
+.doneTurn {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  color: green;
+  border: 1px solid var(--clr-grey);
+  border-radius: 5px;
+  background-color: var(--clr-lightgrey);
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.doneTurn:hover {
+  background-color: var(--clr-lightblue);
+}
+
+.doneTurn:checked {
+  background-color: var(--clr-blue);
+  border: 1px solid var(--clr-darkergrey)
+}
+
+li:has(.doneTurn:checked) {
+  background-color: var(--clr-darkgrey);
+}
+
+.doneTurn:checked ~ .playerName {
+  text-decoration: line-through;
+  background-color: var(--clr-darkgrey);
+}
+
+.doneTurn:checked ~ .roll {
+  background-color: var(--clr-darkgrey);
+  border: 1px solid var(--clr-darkergrey);
 }
 
 .roll {
   margin: 5px 0;
   display: flex;
   width: 20px;
-  justify-content: space-between;
-  align-items: center;
+  font-size:16px;
+  justify-content: center;
   text-align: center;
-  background-color: #f7f7f7;
+  background-color: var(--clr-light);
   padding: 8px;
-  border: 1px solid black;
+  border: 1px solid var(--clr-grey);
   border-radius: 5px;
 }
 
@@ -70,23 +133,22 @@ li {
   outline: none;
 }
 
-.playerName[disabled] {
+.playerName {
   margin: 5px 0;
   display: flex;
   width: 60%;
-  /* justify-content: space-between; */
   align-items: center;
-  color: black;
-  background-color: #f7f7f7;
+  color: var(--clr-black);
+  background-color: var(--clr-light);
   padding: 8px;
-  border-radius: 5px;
 }
 
 .delete {
-  background-color: #ff6b6b;
+  background-color: var(--clr-red);
   color: white;
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
+  height: 35px;
 }

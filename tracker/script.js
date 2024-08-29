@@ -1,6 +1,7 @@
 const playerForm = document.querySelector('form');
 const playerInput = document.getElementById('playerInput');
 const addButton = document.getElementById('addPlayer');
+const clearButton = document.getElementById('clearTurn');
 const playerList = document.getElementById('playerList');
 
 let allPlayers = getPlayers();
@@ -17,6 +18,7 @@ function addPlayer() {
     const playerObject = {
       name: nameText,
       roll: 0,
+      completed: false,
     }
     allPlayers.push(playerObject);
     updatePlayers();
@@ -41,7 +43,8 @@ function createPlayerItem(player, playerIndex) {
   const playerRoll = player.roll;
 
   Player.innerHTML = `
-    <input type='text' class='roll' id='${playerID}' value=${playerRoll}></input>
+    <input type='checkbox' tabIndex='-1' class='doneTurn' id='${playerID}'>
+    <input type='text' onFocus='this.select()' class='roll' id='${playerID}' value=${playerRoll}></input>
     <label for'${playerID}' class='playerName'>${playerName}</label>
     <button class='delete' tabIndex='-1'>Delete</button>
   `
@@ -50,7 +53,13 @@ function createPlayerItem(player, playerIndex) {
   deletePlayerItem(playerIndex);
   })  
 
-  const roll = Player.querySelector('input');
+  const checkbox = Player.querySelector('.doneTurn');
+  checkbox.addEventListener('change', () => {
+    allPlayers[playerIndex].completed = checkbox.checked;
+    savePlayers();
+  })
+
+  const roll = Player.querySelector('.roll');
   roll.addEventListener('change', () => {
     allPlayers[playerIndex].roll = roll.value;
     allPlayers.sort(function(a, b) {
@@ -60,9 +69,23 @@ function createPlayerItem(player, playerIndex) {
     updatePlayers();
   })
 
-  playerRoll.value = Player.input;
+  checkbox.checked = player.completed;
   return Player;
 }
+
+clearButton.addEventListener('click', () => {
+  allPlayers.forEach((player) => {
+    player.completed = false;
+  })
+  savePlayers();
+  updatePlayers();
+})
+
+// function clearTurns() {
+//   allPlayers.forEach((player)=> {
+//     player.
+//   }
+// }
 
 function deletePlayerItem(playerIndex) {
   allPlayers = allPlayers.filter((_, i) => i !== playerIndex);
