@@ -44,7 +44,7 @@ h1 {
 
 #addPlayer {
   background-color: var(--clr-blue);
-  color: var(--clr-white);
+  color: var(--clr-black);
   border: none;
   width: 100px;
   /* padding: 5px 10px; */
@@ -57,7 +57,7 @@ h1 {
 #clearTurn {
   margin-top: 10px;
   background-color: var(--clr-red);
-  color: var(--clr-white);
+  color: var(--clr-black);
   border: none;
   width: 200px;
   /* padding: 5px 10px; */
@@ -70,7 +70,8 @@ h1 {
 .players {
   margin-top: 10px;
   width: 400px;
-  background-color: #282a3d;
+  background-color: #393b4e;
+  /* background-color: #282a3d; */
   border-radius: 5px;
   overflow: hidden;
   display: grid;
@@ -118,16 +119,18 @@ li {
 }
 
 li:has(.doneTurn:checked) {
-  background-color: var(--clr-darkgrey);
+  background-color: var(--clr-bg);
 }
 
 .doneTurn:checked ~ .playerName {
   text-decoration: line-through;
-  background-color: var(--clr-darkgrey);
+  color: var(--clr-light);
+  background-color: var(--clr-bg);
 }
 
 .doneTurn:checked ~ .roll {
-  background-color: var(--clr-darkgrey);
+  color: var(--clr-light);
+  background-color: var(--clr-bg);
   border: 1px solid var(--clr-darkergrey);
 }
 
@@ -164,7 +167,7 @@ li:has(.doneTurn:checked) {
 
 .delete {
   background-color: var(--clr-red);
-  color: var(--clr-white);
+  color: var(--clr-black);
   padding: 5px 10px;
   border: 1px solid var(--clr-grey);
   border-radius: 5px;
