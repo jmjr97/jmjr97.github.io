@@ -1,14 +1,15 @@
 :root {
   --clr-bg: #1a1b26;
-  --clr-light: #f7f7f7;
+  --clr-light: #d5d5d5;
   --clr-blue: #7aa2f7;
   --clr-lightblue: #8aa3f8;
   --clr-red: #ff6b6b;
-  --clr-lightgrey: #b0b0b0;
+  --clr-lightgrey: #b3b3b3;
   --clr-grey: #808080;
   --clr-darkgrey: #555555;
   --clr-darkergrey: #333333;
   --clr-black: #000000;
+  --clr-white: #ffffff;
 }
 
 body {
@@ -43,7 +44,7 @@ h1 {
 
 #addPlayer {
   background-color: var(--clr-blue);
-  color: var(--clr-light);
+  color: var(--clr-white);
   border: none;
   width: 100px;
   /* padding: 5px 10px; */
@@ -54,8 +55,9 @@ h1 {
 }
 
 #clearTurn {
+  margin-top: 10px;
   background-color: var(--clr-red);
-  color: var(--clr-light);
+  color: var(--clr-white);
   border: none;
   width: 200px;
   /* padding: 5px 10px; */
@@ -65,18 +67,31 @@ h1 {
   border: 1px solid var(--clr-black);
 }
 
+.players {
+  margin-top: 10px;
+  width: 400px;
+  background-color: #282a3d;
+  border-radius: 5px;
+  overflow: hidden;
+  display: grid;
+  box-shadow: -1px -1px var(--clr-black);
+  justify-items: center;
+}
+
 ul {
+  margin: 0px;
   list-style-type: none;
+  width: 390px;
   padding: 0;
 }
 
 li {
-  margin: 5px 0;
+  margin: 10px 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f7f7f7;
-  padding: 8px;
+  background-color: var(--clr-light);
+  padding: 3px;
   border-radius: 5px;
   border: 1px solid var(--clr-black);
 }
@@ -116,6 +131,10 @@ li:has(.doneTurn:checked) {
   border: 1px solid var(--clr-darkergrey);
 }
 
+.doneTurn:checked ~ .delete {
+  border: 1px solid var(--clr-darkergrey);
+}
+
 .roll {
   margin: 5px 0;
   display: flex;
@@ -145,9 +164,9 @@ li:has(.doneTurn:checked) {
 
 .delete {
   background-color: var(--clr-red);
-  color: var(--clr-light);
-  border: none;
+  color: var(--clr-white);
   padding: 5px 10px;
+  border: 1px solid var(--clr-grey);
   border-radius: 5px;
   cursor: pointer;
   height: 35px;
