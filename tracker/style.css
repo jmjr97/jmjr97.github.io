@@ -1,9 +1,9 @@
 :root {
   --clr-bg: #1a1b26;
   --clr-light: #f7f7f7;
-  --clr-blue: #3333ff;
-  --clr-lightblue: #3366ff;
-  --clr-red: #cc0000;
+  --clr-blue: #7aa2f7;
+  --clr-lightblue: #8aa3f8;
+  --clr-red: #ff6b6b;
   --clr-lightgrey: #b0b0b0;
   --clr-grey: #808080;
   --clr-darkgrey: #555555;
@@ -43,7 +43,7 @@ h1 {
 
 #addPlayer {
   background-color: var(--clr-blue);
-  color: white;
+  color: var(--clr-light);
   border: none;
   width: 100px;
   /* padding: 5px 10px; */
@@ -55,7 +55,7 @@ h1 {
 
 #clearTurn {
   background-color: var(--clr-red);
-  color: white;
+  color: var(--clr-light);
   border: none;
   width: 200px;
   /* padding: 5px 10px; */
@@ -145,7 +145,7 @@ li:has(.doneTurn:checked) {
 
 .delete {
   background-color: var(--clr-red);
-  color: white;
+  color: var(--clr-light);
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
