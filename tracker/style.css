@@ -1,34 +1,38 @@
 :root {
-  --clr-bg: #1a1b26;
-  --clr-light: #d5d5d5;
-  --clr-blue: #003399;
-  /* --clr-blue: #7aa2f7; */
-  --clr-lightblue: #0033cc;
-  /* --clr-lightblue: #8aa3f8; */
-  --clr-red: #981b1b;
-  /* --clr-red: #ff6b6b; */
-  --clr-lightgrey: #b3b3b3;
-  --clr-grey: #a0a0a0;
-  /* --clr-grey: #808080; */
-  --clr-darkgrey: #666666;
-  --clr-darkergrey: #333333;
-  --clr-black: #000000;
-  --clr-white: #ffffff;
+  --clr-page-bg: #1a1b26;
+  --clr-bg-light: #c5cad9;
+  /* --clr-bg-dark: #5f6168; */
+  --clr-bg-dark: #616b91;
+  --clr-text-box: #dee3f5;
+  --clr-text: #c8d3f5;
+
+  --clr-border: #545c7e;
+  --clr-border-light: #787c99;
+  
+  --clr-btn-1: #82aaff;
+  --clr-btn-2: #ff757f;
+
+  /* --clr-bg-light: #c5cad9; */
+  /* --clr-bg-light: #8b8e98; */
 }
 
 body {
-  background-color: #1a1b26;
+  background-color: var(--clr-page-bg);
 }
 
 h1 {
-  color: var(--clr-light);
+  color: var(--clr-text);
 }
 
 .container {
   text-align: center;
-  margin: 0 auto;
+  margin: 20px auto;
   width: 400px;
-  background-color: var(--clr-bg);
+  background-color: #282a3d;
+  padding: 10px;
+  border: 1px solid black;
+  /* box-shadow: -1px -1px black; */
+  border-radius: 5px;
 }
 
 #playerInput {
@@ -36,10 +40,10 @@ h1 {
   justify-content: space-between;
   align-items: center;
   width: 250px;
-  background-color: var(--clr-light);
+  background-color: var(--clr-text-box);
   padding: 8px;
   border-radius: 5px;
-  border: 1px solid var(--clr-black);
+  border: 1px solid var(--clr-border);
 }
 
 #playerInput:focus {
@@ -47,39 +51,38 @@ h1 {
 }
 
 #addPlayer {
-  background-color: var(--clr-blue);
+  background-color: var(--clr-btn-1);
   color: var(--clr-light);
   border: none;
   width: 100px;
   /* padding: 5px 10px; */
   padding: 8px;
+  border: 1px solid var(--clr-border);
   border-radius: 5px;
   cursor: pointer;
-  border: 1px solid var(--clr-black);
 }
 
 #clearTurn {
   margin-top: 10px;
-  background-color: var(--clr-red);
+  background-color: var(--clr-btn-2);
   color: var(--clr-light);
-  border: none;
+  border: 1px solid var(--clr-border);
   width: 200px;
   /* padding: 5px 10px; */
   padding: 8px;
   border-radius: 5px;
   cursor: pointer;
-  border: 1px solid var(--clr-black);
 }
 
 .players {
   margin-top: 10px;
   width: 400px;
-  background-color: #393b4e;
-  /* background-color: #282a3d; */
+  /* background-color: var(--clr-page-bg); */
+  /* background-color: #393b4e; */
   border-radius: 5px;
   overflow: hidden;
   display: grid;
-  box-shadow: -1px -1px var(--clr-black);
+  /* box-shadow: -1px -1px var(--clr-black); */
   justify-items: center;
 }
 
@@ -95,10 +98,10 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--clr-grey);
+  background-color: var(--clr-bg-light);
   padding: 3px;
   border-radius: 5px;
-  border: 1px solid var(--clr-black);
+  border: 1px solid var(--clr-border);
 }
 
 .doneTurn {
@@ -106,7 +109,7 @@ li {
   width: 25px;
   height: 25px;
   color: green;
-  border: 1px solid var(--clr-darkergrey);
+  border: 1px solid var(--clr-border);
   border-radius: 5px;
   background-color: var(--clr-darkgrey);
   margin-right: 5px;
@@ -114,29 +117,21 @@ li {
 }
 
 .doneTurn:hover {
-  background-color: var(--clr-darkergrey);
-  border: 1px solid var(--clr-black);
+  border: 1px solid var(--clr-border-light);
 }
 
 .doneTurn:checked {
-  background-color: var(--clr-lightblue);
-  border: 1px solid var(--clr-black);
-}
-
-li:has(.doneTurn:checked) {
-  background-color: var(--clr-bg);
-}
-
-.doneTurn:checked ~ .playerName {
-  text-decoration: line-through;
-  color: var(--clr-light);
-  background-color: var(--clr-bg);
+  background-color: var(--clr-btn-1);
+  border: 1px solid var(--clr-border-light);
 }
 
 .doneTurn:checked ~ .roll {
-  color: var(--clr-light);
-  background-color: var(--clr-bg);
-  border: 1px solid var(--clr-black);
+  background-color: var(--clr-bg-dark);
+  border: 1px solid var(--clr-border-light);
+}
+
+li:has(.doneTurn:checked) {
+  background-color: var(--clr-bg-dark);
 }
 
 .roll {
@@ -146,9 +141,9 @@ li:has(.doneTurn:checked) {
   font-size:16px;
   justify-content: center;
   text-align: center;
-  background-color: var(--clr-grey);
+  background-color: var(--clr-bg-light);
   padding: 8px;
-  border: 1px solid var(--clr-darkergrey);
+  border: 1px solid var(--clr-border);
   border-radius: 5px;
 }
 
@@ -167,11 +162,12 @@ li:has(.doneTurn:checked) {
 }
 
 .delete {
-  background-color: var(--clr-red);
-  color: var(--clr-light);
+  background-color: var(--clr-btn-2);
+  color: var(--clr-text-light);
   padding: 5px 10px;
-  border: 1px solid var(--clr-black);
   border-radius: 5px;
   cursor: pointer;
   height: 35px;
+  border: 1px solid var(--clr-border);
+
 }
