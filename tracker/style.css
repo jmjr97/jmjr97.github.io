@@ -1,12 +1,16 @@
 :root {
   --clr-bg: #1a1b26;
   --clr-light: #d5d5d5;
-  --clr-blue: #7aa2f7;
-  --clr-lightblue: #8aa3f8;
-  --clr-red: #ff6b6b;
+  --clr-blue: #003399;
+  /* --clr-blue: #7aa2f7; */
+  --clr-lightblue: #0033cc;
+  /* --clr-lightblue: #8aa3f8; */
+  --clr-red: #981b1b;
+  /* --clr-red: #ff6b6b; */
   --clr-lightgrey: #b3b3b3;
-  --clr-grey: #808080;
-  --clr-darkgrey: #555555;
+  --clr-grey: #a0a0a0;
+  /* --clr-grey: #808080; */
+  --clr-darkgrey: #666666;
   --clr-darkergrey: #333333;
   --clr-black: #000000;
   --clr-white: #ffffff;
@@ -44,7 +48,7 @@ h1 {
 
 #addPlayer {
   background-color: var(--clr-blue);
-  color: var(--clr-black);
+  color: var(--clr-light);
   border: none;
   width: 100px;
   /* padding: 5px 10px; */
@@ -57,7 +61,7 @@ h1 {
 #clearTurn {
   margin-top: 10px;
   background-color: var(--clr-red);
-  color: var(--clr-black);
+  color: var(--clr-light);
   border: none;
   width: 200px;
   /* padding: 5px 10px; */
@@ -91,7 +95,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--clr-light);
+  background-color: var(--clr-grey);
   padding: 3px;
   border-radius: 5px;
   border: 1px solid var(--clr-black);
@@ -102,20 +106,21 @@ li {
   width: 25px;
   height: 25px;
   color: green;
-  border: 1px solid var(--clr-grey);
+  border: 1px solid var(--clr-darkergrey);
   border-radius: 5px;
-  background-color: var(--clr-lightgrey);
+  background-color: var(--clr-darkgrey);
   margin-right: 5px;
   cursor: pointer;
 }
 
 .doneTurn:hover {
-  background-color: var(--clr-lightblue);
+  background-color: var(--clr-darkergrey);
+  border: 1px solid var(--clr-black);
 }
 
 .doneTurn:checked {
-  background-color: var(--clr-blue);
-  border: 1px solid var(--clr-darkergrey)
+  background-color: var(--clr-lightblue);
+  border: 1px solid var(--clr-black);
 }
 
 li:has(.doneTurn:checked) {
@@ -131,11 +136,7 @@ li:has(.doneTurn:checked) {
 .doneTurn:checked ~ .roll {
   color: var(--clr-light);
   background-color: var(--clr-bg);
-  border: 1px solid var(--clr-darkergrey);
-}
-
-.doneTurn:checked ~ .delete {
-  border: 1px solid var(--clr-darkergrey);
+  border: 1px solid var(--clr-black);
 }
 
 .roll {
@@ -145,9 +146,9 @@ li:has(.doneTurn:checked) {
   font-size:16px;
   justify-content: center;
   text-align: center;
-  background-color: var(--clr-light);
+  background-color: var(--clr-grey);
   padding: 8px;
-  border: 1px solid var(--clr-grey);
+  border: 1px solid var(--clr-darkergrey);
   border-radius: 5px;
 }
 
@@ -161,15 +162,15 @@ li:has(.doneTurn:checked) {
   width: 60%;
   align-items: center;
   color: var(--clr-black);
-  background-color: var(--clr-light);
+  background-color: var(--clr-grey);
   padding: 8px;
 }
 
 .delete {
   background-color: var(--clr-red);
-  color: var(--clr-black);
+  color: var(--clr-light);
   padding: 5px 10px;
-  border: 1px solid var(--clr-grey);
+  border: 1px solid var(--clr-black);
   border-radius: 5px;
   cursor: pointer;
   height: 35px;
