@@ -1,5 +1,13 @@
+:root {
+  --clr-bg: #222436;
+  --clr-bg-alt: #2f334d;
+  --clr-fg: #c8d3f5;
+  --clr-border: #545c7e;
+  --clr-shadow: #111111;
+}
+
 body{
-    background-color: #1a1b26;
+  background-color: var(--clr-bg);
 	background-repeat: no-repeat;
 }
 
@@ -8,26 +16,26 @@ a{
 }
 
 h2{
-	color: #acb4c2;
+	color: var(--clr-fg);
 	text-align: center;
 }
 
 h3{
-	color: #acb4c2;
+	color: var(--clr-fg);
 	text-align: center;
 	margin: 2px;
 }
 
 .dateTime{
 	margin: auto;
-    margin-top: 5%;
+  margin-top: 5%;
 	font-size: 16px;
 	text-align: center;
 	padding: 24px;
-	color: white;
-	background-color: #282a3d;
+	color: var(--clr-fg);
+	background-color: var(--clr-bg-alt);
+  border: 1px solid var(--clr-border);
 	border-radius: 5px;
-	box-shadow: -1px -1px black;
 	width: 300px;
 	font-family: 'Inter', sans-sarif;
 	font-weight: 500;
@@ -35,10 +43,6 @@ h3{
 
 .time{
 	font-size: 3em;
-}
-
-.date{
-
 }
 
 .mainImg {
@@ -51,21 +55,11 @@ h3{
 .mainDiv{
 	margin: auto;
 	width: 930px;
-	background-color: #282a3d;
+	background-color: var(--clr-bg-alt);
 	border-radius: 5px;
 	overflow: hidden;
 	display: grid;
-	box-shadow: -1px -1px black;
-}
-
-.mainDivSmall{
-	margin: auto;
-	width: 470px;
-	background-color: #282a3d;
-	border-radius: 5px;
-	overflow: hidden;
-	display: grid;
-	box-shadow: -1px -1px black;
+  border: 1px solid var(--clr-border);
 }
 
 .mainDivPadding{
@@ -86,27 +80,21 @@ h3{
 .divButton{
 	margin: 4px;
 	width: fit-content;
-    border: 1px;
-    border-color: #3a3a3a;
-    border-style: solid;
+  border: 1px solid var(--clr-border);
 	border-radius: 5px;
-	background-color: #1a1b26;
+	background-color: var(--clr-bg);
 	float: left;
 	display: block;
-	box-shadow: 1px 1px black;
 }
 .divButtonBottom{
 	margin: 4px;
 	margin-top: 0px;
-    border: 1px;
-    border-color: #3a3a3a;
-    border-style: solid;
+  border: 1px solid var(--clr-border);
 	width: fit-content;
 	border-radius: 5px;
-	background-color: #1a1b26;
+	background-color: var(--clr-bg);
 	float: left;
 	display: block;
-	box-shadow: 1px 1px black;
 }
 
 .divLinks{
