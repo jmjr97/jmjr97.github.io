@@ -2,6 +2,7 @@ const playerForm = document.querySelector('form');
 const playerInput = document.getElementById('playerInput');
 const addButton = document.getElementById('addPlayer');
 const clearButton = document.getElementById('clearTurn');
+const clearRolls = document.getElementById('clearRolls');
 const playerList = document.getElementById('playerList');
 
 let allPlayers = getPlayers();
@@ -14,7 +15,7 @@ playerForm.addEventListener('submit', function(e) {
 
 function addPlayer() {
   const nameText = playerInput.value.trim();
-  if(nameText.value !== '') {
+  if(nameText) {
     const playerObject = {
       name: nameText,
       roll: 0,
@@ -44,7 +45,7 @@ function createPlayerItem(player, playerIndex) {
 
   Player.innerHTML = `
     <input type='checkbox' tabIndex='-1' class='doneTurn' id='${playerID}'>
-    <input type='text' onFocus='this.select()' class='roll' id='${playerID}' value=${playerRoll}></input>
+    <input type='text' onFocus='this.select()' inputmode='numeric' maxlength='2' class='roll' id='${playerID}' value=${playerRoll}></input>
     <label for'${playerID}' class='playerName'>${playerName}</label>
     <button class='delete' tabIndex='-1'>Delete</button>
   `
@@ -81,11 +82,17 @@ clearButton.addEventListener('click', () => {
   updatePlayers();
 })
 
-// function clearTurns() {
-//   allPlayers.forEach((player)=> {
-//     player.
-//   }
-// }
+clearRolls.addEventListener('click', () => {
+  // const answer = window.confirm('Clear Initiative Rolls?');
+  // if(answer) {
+  if(window.confirm('Clear Initiative Rolls?')) {
+    allPlayers.forEach((player) => {
+      player.roll = 0;
+    })
+    savePlayers();
+    updatePlayers();
+  }
+})
 
 function deletePlayerItem(playerIndex) {
   allPlayers = allPlayers.filter((_, i) => i !== playerIndex);

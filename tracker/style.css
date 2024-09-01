@@ -64,7 +64,7 @@ h1 {
   background-color: var(--clr-btn);
   color: var(--clr-text);
   border: none;
-  width: 200px;
+  width: 180px;
   padding: 8px;
   border-radius: 5px;
   cursor: pointer;
@@ -74,6 +74,20 @@ h1 {
   color: var(--clr-text-contrast);
 }
 
+#clearRolls {
+  margin-top: 10px;
+  background-color: var(--clr-btn);
+  color: var(--clr-text);
+  border: none;
+  width: 180px;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#clearRolls:hover {
+  color: var(--clr-text-contrast);
+}
 .players {
   margin-top: 10px;
   width: 400px;
