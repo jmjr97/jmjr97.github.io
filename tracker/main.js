@@ -51,12 +51,12 @@ function createPlayerItem(player, playerIndex) {
     <div class='top'>
       <input type='checkbox' tabIndex='-1' class='doneTurn' id='${playerID}'>
       <input type='text' onFocus='this.select()' inputmode='numeric' maxlength='2' class='roll' id='${playerID}' value='${playerRoll}'></input>
-      <input type='text' onFocus='this.select()' inputmode='numeric' maxlength='3' class='hp' id='${playerID}' value='${playerHp}'></input>
+      <input type='text' onFocus='this.select()' inputmode='numeric' maxlength='3' tabIndex='-1' class='hp' id='${playerID}' value='${playerHp}'></input>
       <label for'${playerID}' class='playerName'>${playerName}</label>
       <button class='delete' tabIndex='-1'>Delete</button>
     </div>
     <div class='bottom'>
-      <input type='text' placeholder='Notes:' maxlength='46' class='note' id='${playerID}' value='${playerNote}'>
+      <input type='text' placeholder='Notes:' maxlength='46' tabIndex='-1' class='note' id='${playerID}' value='${playerNote}'>
     </div>
   `
   const deletePlayer = Player.querySelector('.delete');
