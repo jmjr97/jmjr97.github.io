@@ -145,14 +145,46 @@ li:last-of-type {
   text-decoration: line-through;
 }
 
-.doneTurn:checked ~ .roll {
+.doneTurn:checked ~ .labels .roll {
   color: var(--clr-text-dim);
   border: 1px solid var(--clr-border-light);
 }
 
-.doneTurn:checked ~ .hp {
+.doneTurn:checked ~ .labels .hp {
   color: var(--clr-text-dim);
   border: 1px solid var(--clr-border-light);
+}
+
+.doneTurn:checked ~ .labels .title-init {
+  color: var(--clr-text-dim);
+}
+
+.doneTurn:checked ~ .labels .title-hp {
+  color: var(--clr-text-dim);
+}
+
+.labels {
+  position: relative;
+}
+
+.title-init {
+  position: absolute;
+  text-align: center;
+  top: -5px;
+  left: 5px;
+  font-size: 12px;
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+}
+
+.title-hp {
+  position: absolute;
+  text-align: center;
+  top: -5px;
+  left: 10px;
+  font-size: 12px;
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
 }
 
 .roll {
@@ -162,6 +194,7 @@ li:last-of-type {
   font-size:16px;
   justify-content: center;
   text-align: center;
+  color: var(--clr-text);
   background-color: var(--clr-bg);
   padding: 8px;
   border: 1px solid var(--clr-border);
@@ -170,7 +203,8 @@ li:last-of-type {
 }
 
 .roll[value='0'] {
-  background-color: var(--clr-btn);
+  color: var(--clr-btn);
+  border: 1px dashed var(--clr-btn);
 }
 
 .hp {
@@ -181,6 +215,7 @@ li:last-of-type {
   font-size:16px;
   justify-content: center;
   text-align: center;
+  color: var(--clr-text);
   background-color: var(--clr-bg);
   padding: 8px;
   border: 1px solid var(--clr-border);
@@ -188,8 +223,9 @@ li:last-of-type {
   outline: none;
 }
 
-.hp[value='0'] {
-  background-color: var(--clr-btn);
+.hp[value=''] {
+  color: var(--clr-btn);
+  border: 1px dashed var(--clr-btn);
 }
 
 .playerName {

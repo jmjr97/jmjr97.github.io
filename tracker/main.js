@@ -19,7 +19,7 @@ function addPlayer() {
     const playerObject = {
       name: nameText,
       roll: 0,
-      hp: 0,
+      hp: '',
       completed: false,
       note: '',
     }
@@ -50,8 +50,14 @@ function createPlayerItem(player, playerIndex) {
   Player.innerHTML = `
     <div class='top'>
       <input type='checkbox' tabIndex='-1' class='doneTurn' id='${playerID}'>
-      <input type='text' onFocus='this.select()' inputmode='numeric' maxlength='2' class='roll' id='${playerID}' value='${playerRoll}'></input>
-      <input type='text' onFocus='this.select()' inputmode='numeric' maxlength='3' tabIndex='-1' class='hp' id='${playerID}' value='${playerHp}'></input>
+      <div class='labels'>
+        <label class='title-init'>Init</label>
+        <input type='text' onFocus='this.select()' inputmode='numeric' maxlength='2' class='roll' id='${playerID}' value='${playerRoll}'></input>
+      </div>
+      <div class='labels'>
+        <label class='title-hp'>Hp</label>
+        <input type='text' onFocus='this.select()' inputmode='numeric' maxlength='3' tabIndex='-1' class='hp' id='${playerID}' value='${playerHp}'></input>
+      </div>
       <label for'${playerID}' class='playerName'>${playerName}</label>
       <button class='delete' tabIndex='-1'>Delete</button>
     </div>
