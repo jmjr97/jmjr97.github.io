@@ -19,7 +19,9 @@ function addPlayer() {
     const playerObject = {
       name: nameText,
       roll: 0,
+      hp: 0,
       completed: false,
+      note: '',
     }
     allPlayers.push(playerObject);
     updatePlayers();
@@ -42,12 +44,20 @@ function createPlayerItem(player, playerIndex) {
   const Player = document.createElement('li');
   const playerName = player.name;
   const playerRoll = player.roll;
+  const playerHp = player.hp;
+  const playerNote = player.note;
 
   Player.innerHTML = `
-    <input type='checkbox' tabIndex='-1' class='doneTurn' id='${playerID}'>
-    <input type='text' onFocus='this.select()' inputmode='numeric' maxlength='2' class='roll' id='${playerID}' value=${playerRoll}></input>
-    <label for'${playerID}' class='playerName'>${playerName}</label>
-    <button class='delete' tabIndex='-1'>Delete</button>
+    <div class='top'>
+      <input type='checkbox' tabIndex='-1' class='doneTurn' id='${playerID}'>
+      <input type='text' onFocus='this.select()' inputmode='numeric' maxlength='2' class='roll' id='${playerID}' value='${playerRoll}'></input>
+      <input type='text' onFocus='this.select()' inputmode='numeric' maxlength='3' class='hp' id='${playerID}' value='${playerHp}'></input>
+      <label for'${playerID}' class='playerName'>${playerName}</label>
+      <button class='delete' tabIndex='-1'>Delete</button>
+    </div>
+    <div class='bottom'>
+      <input type='text' placeholder='Notes:' maxlength='46' class='note' id='${playerID}' value='${playerNote}'>
+    </div>
   `
   const deletePlayer = Player.querySelector('.delete');
   deletePlayer.addEventListener('click', () => {
@@ -66,6 +76,20 @@ function createPlayerItem(player, playerIndex) {
     allPlayers.sort(function(a, b) {
       return b.roll - a.roll;
     })
+    savePlayers();
+    updatePlayers();
+  })
+
+  const hp = Player.querySelector('.hp');
+  hp.addEventListener('change', () => {
+    allPlayers[playerIndex].hp = hp.value;
+    savePlayers();
+    updatePlayers();
+  })
+
+  const note = Player.querySelector('.note');
+  note.addEventListener('change', () => {
+    allPlayers[playerIndex].note = note.value;
     savePlayers();
     updatePlayers();
   })

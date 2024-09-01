@@ -108,11 +108,11 @@ ul {
 
 li {
   margin: 10px 5px;
-  display: flex;
+  display: block;
   justify-content: space-between;
   align-items: center;
   padding: 3px;
-  border-bottom: 1px solid var(--clr-border-light);
+  border-bottom: 1px solid var(--clr-border);
 }
 
 li:last-of-type {
@@ -120,6 +120,7 @@ li:last-of-type {
 }
 
 .doneTurn {
+  margin: 10px 0;
   appearance: none;
   width: 25px;
   height: 25px;
@@ -149,6 +150,11 @@ li:last-of-type {
   border: 1px solid var(--clr-border-light);
 }
 
+.doneTurn:checked ~ .hp {
+  color: var(--clr-text-dim);
+  border: 1px solid var(--clr-border-light);
+}
+
 .roll {
   margin: 5px 0;
   display: flex;
@@ -160,13 +166,29 @@ li:last-of-type {
   padding: 8px;
   border: 1px solid var(--clr-border);
   border-radius: 5px;
-}
-
-.roll:focus {
   outline: none;
 }
 
 .roll[value='0'] {
+  background-color: var(--clr-btn);
+}
+
+.hp {
+  margin: 5px 0;
+  margin-left: 5px;
+  display: flex;
+  width: 28px;
+  font-size:16px;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--clr-bg);
+  padding: 8px;
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+  outline: none;
+}
+
+.hp[value='0'] {
   background-color: var(--clr-btn);
 }
 
@@ -180,6 +202,7 @@ li:last-of-type {
 }
 
 .delete {
+  margin: 5px 0;
   background-color: var(--clr-btn);
   color: var(--clr-text);
   padding: 5px 10px;
@@ -191,4 +214,21 @@ li:last-of-type {
 
 .delete:hover {
   color: var(--clr-text-contrast);
+}
+
+.note {
+  display: block;
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--clr-border-light);
+  background-color: var(--clr-bg);
+  outline: none;
+}
+
+.top {
+  display: flex;
+}
+
+.bottom {
+  display: block;
 }
