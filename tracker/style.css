@@ -112,7 +112,7 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 3px;
-  border-bottom: 2px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
 }
 
 li:last-of-type {
