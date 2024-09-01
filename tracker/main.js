@@ -83,8 +83,6 @@ clearButton.addEventListener('click', () => {
 })
 
 clearRolls.addEventListener('click', () => {
-  // const answer = window.confirm('Clear Initiative Rolls?');
-  // if(answer) {
   if(window.confirm('Clear Initiative Rolls?')) {
     allPlayers.forEach((player) => {
       player.roll = 0;

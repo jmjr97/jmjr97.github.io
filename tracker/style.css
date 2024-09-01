@@ -166,6 +166,10 @@ li:last-of-type {
   outline: none;
 }
 
+.roll[value='0'] {
+  background-color: var(--clr-btn);
+}
+
 .playerName {
   margin: 5px 0;
   display: flex;
