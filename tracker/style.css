@@ -202,7 +202,7 @@ li:last-of-type {
   outline: none;
 }
 
-.roll[value='0'] {
+.roll[value=''] {
   color: var(--clr-btn);
   border: 1px dashed var(--clr-btn);
 }

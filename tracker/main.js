@@ -18,7 +18,7 @@ function addPlayer() {
   if(nameText) {
     const playerObject = {
       name: nameText,
-      roll: 0,
+      roll: '',
       hp: '',
       completed: false,
       note: '',
@@ -115,7 +115,7 @@ clearButton.addEventListener('click', () => {
 clearRolls.addEventListener('click', () => {
   if(window.confirm('Clear Initiative Rolls?')) {
     allPlayers.forEach((player) => {
-      player.roll = 0;
+      player.roll = '';
     })
     savePlayers();
     updatePlayers();
