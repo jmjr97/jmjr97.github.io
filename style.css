@@ -154,12 +154,7 @@ label {
 	width: 930px;
   height: fit-content;
   justify-items: center;
-	background-color: var(--clr-bg-alt);
-	border-radius: 5px;
-	overflow: hidden;
 	display: grid;
-  border: 1px solid var(--clr-border);
-  box-shadow: 1px 1px 1px 1px var(--clr-shadow);
 	font-family: 'Inter', sans-sarif;
 }
 
@@ -168,13 +163,12 @@ label {
   margin: 20px 20px;
 	width: 260px;
 	float: left;
-	/* font-family: 'Nerd Font', sans-serif; */
 	font-weight: 400;
   padding: 10px 0;
   border: 1px solid var(--clr-border);
   box-shadow: 1px 1px 1px 1px var(--clr-shadow);
   border-radius: 5px;
-  background-color: var(--clr-bg);
+  background-color: var(--clr-bg-alt);
 }
 
 .linkTitle {
