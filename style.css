@@ -31,30 +31,91 @@ h3:hover {
   color: var(--clr-hover);
 }
 
+label {
+  width: 150px;
+  padding: none;
+}
+
+.infoDiv {
+  margin: auto;
+  width: 800px;
+  display: flex;
+}
+
 .dateTime {
 	margin: auto;
   margin-top: 5%;
+	width: 300px;
+	height: 130px;
 	font-size: 16px;
 	text-align: center;
-	padding: 24px;
 	color: var(--clr-fg);
 	background-color: var(--clr-bg-alt);
   border: 1px solid var(--clr-border);
   box-shadow: 1px 1px 1px 1px var(--clr-shadow);
 	border-radius: 5px;
-	width: 300px;
 	font-family: 'Inter', sans-sarif;
-	font-weight: 500;
 }
 
 .time {
+  margin-top: 24px;
 	font-size: 3em;
+}
+
+.weather {
+  margin: auto;
+  margin-top: 5%;
+  width: 300px;
+	height: 130px;
+	color: var(--clr-fg);
+	background-color: var(--clr-bg-alt);
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px var(--clr-shadow);
+	border-radius: 5px;
+  display: flex;
+	font-family: 'Inter', sans-sarif;
+}
+
+.weatherNow {
+  text-align: center;
+  padding-top: 5px;
+  width: 150px;
+  border-right: 1px solid var(--clr-border);
+}
+
+.currentTemp {
+  margin-top: 10px;
+  font-size: 36px;
+  display: inline-block;
+}
+
+.forecast {
+  text-align: center;
+  padding-top: 5px;
+  width: 150px;
+  border-left: 1px solid var(--clr-border);
+}
+
+.weatherTitle {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: none;
+  width: 130px;
+  font-size: 20px;
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px var(--clr-shadow);
+  display: inline-block;
+}
+
+.forecastText {
+  display: inline-block;
 }
 
 .mainImg {
 	margin: 10px;
 	width: 200px;
-	height: 50px;
 	display: block;
 }
 
@@ -99,6 +160,7 @@ h3:hover {
 	display: grid;
   border: 1px solid var(--clr-border);
   box-shadow: 1px 1px 1px 1px var(--clr-shadow);
+	font-family: 'Inter', sans-sarif;
 }
 
 .linkGroup {
@@ -106,7 +168,7 @@ h3:hover {
   margin: 20px 20px;
 	width: 260px;
 	float: left;
-	font-family: 'Nerd Font', sans-serif;
+	/* font-family: 'Nerd Font', sans-serif; */
 	font-weight: 400;
   padding: 10px 0;
   border: 1px solid var(--clr-border);
