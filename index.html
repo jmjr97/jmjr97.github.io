@@ -5,23 +5,19 @@
 			<meta charset="UTF-8">
 			<link rel="stylesheet" href="style.css">
 			<title>Home Page</title>
-			<script src="js/main.js" defer></script>
+			<script src="main.js" defer></script>
 
 			<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 	</head>
 	<body>
-    <div class="infoDiv">
-		  <div class="dateTime">
-		  	<div class="time"></div>
-		  	<div class="date"></div>
-		  </div>
-      <div class="weather">
-        <div id="weatherNow" class="weatherNow"></div>
-        <div id="forecast" class="forecast"></div>
-      </div>
-    </div>
-		<br/>
+    <!-- Clock Section -->
+		<div class="dateTime">
+			<div class="time"></div>
+			<div class="date"></div>
+		</div>
+    <!-- Image Links  -->
 		<div class="mainDiv">
+      <!-- Row 1 -->
 			<span class="buttonSpan">
 				<div class="divButton">
 					<a href="http://youtube.com">
@@ -45,6 +41,7 @@
 				</div>
 			</span>
 			<br/>
+      <!-- Row 2 -->
 			<span class="buttonSpan">
 				<div class="divButton">
 					<a href="http://amazon.com">
@@ -68,6 +65,7 @@
 				</div>
 			</span>
       <div class="buttonSpan">
+        <!-- Row 3 -->
 		  	<span class="mainDivPadding">
 		  		<div class="divButton">
 		  			<a href="http://netflix.com">
@@ -92,7 +90,15 @@
 		  	</span>
       </div>
     </div>
-    <br/>
+    <br>
+    <!-- Weather Section -->
+    <div class="weather">
+      <div id="currentWeather" class="currentWeather">
+      </div>
+      <div id="forecast" class="forecast"></div>
+    </div>
+    <br>
+    <!-- Link Groups -->
 		<div class="linkContainer">
 			<div>
 				<div class="linkGroup">

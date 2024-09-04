@@ -1,6 +1,6 @@
 const timeElement = document.querySelector(".time");
 const dateElement = document.querySelector(".date");
-const weatherNow = document.getElementById("weatherNow");
+const currentWeather = document.getElementById("currentWeather");
 const forecast = document.getElementById("forecast");
 const url = "https://api.open-meteo.com/v1/forecast?latitude=39.3183&longitude=-76.4641&current=temperature_2m&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timeformat=unixtime&timezone=America%2FNew_York&forecast_days=3"
 
@@ -51,15 +51,32 @@ async function getWeather() {
       return (Math.round(json.daily.temperature_2m_min[i]));
     }
 
-    weatherNow.innerHTML = `
-      <label class="weatherTitle">Now</label>
-      <label class="currentTemp">${currentTemp()}&deg;F</label>
+    currentWeather.innerHTML = `
+      <div>
+        <label class="weatherTitle">Now</label>
+      </div>
+        <div class='currentLeft'>
+          <label class="currentTemp">${currentTemp()}&deg;F</label>
+        </div>
+        <div class='currentRight'>
+          <img src='img/weather/cloudy.png'>
+        </div>
+      
     `
     forecast.innerHTML = `
-      <label class="weatherTitle">Forecast</label><br>
-      <label class="forecastText">Today, <sup>${tempMax(0)}</sup>/<sub>${tempMin(0)}</sub>&deg;F</label>
-      <label class="forecastText">${month()} ${day(1)}, <sup>${tempMax(1)}</sup>/<sub>${tempMin(1)}</sub>&deg;F</label>
-      <label class="forecastText">${month()} ${day(2)}, <sup>${tempMax(2)}</sup>/<sub>${tempMin(2)}</sub>&deg;F</label>
+      <div>
+        <label class="weatherTitle">Forecast</label><br>
+      </div>
+      <div class='forecastDay'>
+        <label class="forecastText">Today, <sup>${tempMax(0)}</sup>/<sub>${tempMin(0)}</sub>&deg;F</label>
+        <img src='img/weather/cloudy.png'>
+      </div>
+      <div class='forecastDay'>
+        <label class="forecastText">${month()} ${day(1)}, <sup>${tempMax(1)}</sup>/<sub>${tempMin(1)}</sub>&deg;F</label>
+      </div>
+      <div class='forecastDay'>
+        <label class="forecastText">${month()} ${day(2)}, <sup>${tempMax(2)}</sup>/<sub>${tempMin(2)}</sub>&deg;F</label>
+      </div>
     `
 
   } catch {

@@ -36,12 +36,7 @@ label {
   padding: none;
 }
 
-.infoDiv {
-  margin: auto;
-  width: 800px;
-  display: flex;
-}
-
+/* Time */
 .dateTime {
 	margin: auto;
   margin-top: 5%;
@@ -62,57 +57,7 @@ label {
 	font-size: 3em;
 }
 
-.weather {
-  margin: auto;
-  margin-top: 5%;
-  width: 300px;
-	height: 130px;
-	color: var(--clr-fg);
-	background-color: var(--clr-bg-alt);
-  border: 1px solid var(--clr-border);
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px 1px var(--clr-shadow);
-	border-radius: 5px;
-  display: flex;
-	font-family: 'Inter', sans-sarif;
-}
-
-.weatherNow {
-  text-align: center;
-  padding-top: 5px;
-  width: 150px;
-  border-right: 1px solid var(--clr-border);
-}
-
-.currentTemp {
-  margin-top: 10px;
-  font-size: 36px;
-  display: inline-block;
-}
-
-.forecast {
-  text-align: center;
-  padding-top: 5px;
-  width: 150px;
-  border-left: 1px solid var(--clr-border);
-}
-
-.weatherTitle {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  padding: none;
-  width: 130px;
-  font-size: 20px;
-  border: 1px solid var(--clr-border);
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px 1px var(--clr-shadow);
-  display: inline-block;
-}
-
-.forecastText {
-  display: inline-block;
-}
-
+/* Image Links */
 .mainImg {
 	margin: 10px;
 	width: 200px;
@@ -121,6 +66,7 @@ label {
 
 .mainDiv {
 	margin: auto;
+  margin-top: 10px;
   padding: 4px 0;
 	width: 930px;
 	background-color: var(--clr-bg-alt);
@@ -149,6 +95,55 @@ label {
   border: 1px solid var(--clr-hover);
 }
 
+/* Weather */
+.weather {
+  margin: auto;
+  margin-top: 10px;
+  width: 930px;
+	height: 130px;
+  justify-content: center;
+	color: var(--clr-fg);
+	background-color: var(--clr-bg-alt);
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px var(--clr-shadow);
+	border-radius: 5px;
+  display: flex;
+	font-family: 'Inter', sans-sarif;
+}
+
+.currentWeather {
+  text-align: center;
+  width: 185px;
+  float: left;
+}
+
+.forecast {
+  text-align: center;
+  width: 744px;
+  border-left: 1px solid var(--clr-border);
+}
+
+.weatherDay {
+  margin: auto;
+  padding-top: 10px;
+  text-align: center;
+  width: 186px;
+  height: 130px;
+  float: left;
+}
+
+.weatherText {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.weatherIcon {
+  width: 70px;
+  height: 70px;
+}
+
+/* Link Container */
 .linkContainer {
 	margin: auto;
 	width: 930px;
