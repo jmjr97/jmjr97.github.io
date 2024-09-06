@@ -90,16 +90,6 @@ async function getWeather() {
       return (Math.round(json.daily.temperature_2m_min[i]));
     }
 
-    // currentWeather.innerHTML = `
-    //     <div class='currentLeft'>
-    //       <label class="currentTemp">${currentTemp()}&deg;F</label>
-    //     </div>
-    //     <div class='currentRight'>
-    //       <img class='currentIcon' src='img/weather/${weatherCode(nowWC)}.png'>
-    //     </div>
-    //   
-    // `
-
     currentWeather.innerHTML = `
       <div class='weatherDay'>
         <label class="weatherText">Now: ${currentTemp()}&deg;F</label>
@@ -117,11 +107,11 @@ async function getWeather() {
         <img class='weatherIcon' src='img/weather/${weatherCode(getWC(1))}.png'>
       </div>
       <div class='weatherDay'>
-        <label class="weatherText">${month()} ${day(2)}: ${tempMax(getWC(2))}&deg; ${tempMin(2)}&deg;</label>
+        <label class="weatherText">${month()} ${day(2)}: ${tempMax(2)}&deg; ${tempMin(2)}&deg;</label>
         <img class='weatherIcon' src='img/weather/${weatherCode(2)}.png'>
       </div>
       <div class='weatherDay'>
-        <label class="weatherText">${month()} ${day(3)}: ${tempMax(getWC(3))}&deg; ${tempMin(3)}&deg;</label>
+        <label class="weatherText">${month()} ${day(3)}: ${tempMax(3)}&deg; ${tempMin(3)}&deg;</label>
         <img class='weatherIcon' src='img/weather/${weatherCode(3)}.png'>
       </div>
     `
