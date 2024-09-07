@@ -26,7 +26,7 @@ async function getWeather() {
       throw new Error(`Response status: ${response.status})`);
     }
 
-	  const MONTHS = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+	  const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     const d = new Date();
   
     const json = await response.json();
@@ -70,16 +70,16 @@ async function getWeather() {
       return (json.daily.weather_code[i]);
     }
 
-    function month() {
-      return (MONTHS[d.getMonth()]);
+    function dayOfWeek(i) {
+      if ((d.getDay() + i) > 6) {
+        return DAYS[d.getDay() + (i - 7)];
+      } else {
+        return DAYS[d.getDay() + i];
+      }
     }
     
     function currentTemp() {
       return (Math.round(json.current.temperature_2m))
-    }
-
-    function day(i) {
-      return (d.getDate() + i);
     }
 
     function tempMax(i) {
@@ -103,15 +103,15 @@ async function getWeather() {
         <img class='weatherIcon' src='img/weather/${weatherCode(getWC(0))}.png'>
       </div>
       <div class='weatherDay'>
-        <label class="weatherText">${month()} ${day(1)}: ${tempMax(1)}&deg; ${tempMin(1)}&deg;</label>
+        <label class="weatherText">${dayOfWeek(1)}: ${tempMax(1)}&deg; ${tempMin(1)}&deg;</label>
         <img class='weatherIcon' src='img/weather/${weatherCode(getWC(1))}.png'>
       </div>
       <div class='weatherDay'>
-        <label class="weatherText">${month()} ${day(2)}: ${tempMax(2)}&deg; ${tempMin(2)}&deg;</label>
+        <label class="weatherText">${dayOfWeek(2)}: ${tempMax(2)}&deg; ${tempMin(2)}&deg;</label>
         <img class='weatherIcon' src='img/weather/${weatherCode(2)}.png'>
       </div>
       <div class='weatherDay'>
-        <label class="weatherText">${month()} ${day(3)}: ${tempMax(3)}&deg; ${tempMin(3)}&deg;</label>
+        <label class="weatherText">${dayOfWeek(3)}: ${tempMax(3)}&deg; ${tempMin(3)}&deg;</label>
         <img class='weatherIcon' src='img/weather/${weatherCode(3)}.png'>
       </div>
     `
