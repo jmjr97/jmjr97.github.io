@@ -60,7 +60,7 @@ label {
 /* Image Links */
 .mainImg {
 	margin: 10px;
-	width: 200px;
+	width: 45px;
 	display: block;
 }
 
@@ -84,15 +84,26 @@ label {
 
 .divButton {
   margin: 4px;
+  width: 220px;
   border: 1px solid var(--clr-border);
 	border-radius: 5px;
   box-shadow: 1px 1px 1px 1px var(--clr-shadow);
 	background-color: var(--clr-bg);
   float: left;
+  text-align: right;
+  display: flex;
 }
 
 .divButton:hover {
   border: 1px solid var(--clr-hover);
+}
+
+.linkName {
+  color: var(--clr-fg);
+	font-family: 'Inter', sans-sarif;
+  position: relative;
+  right: 10px;
+  top: 40px;
 }
 
 /* Weather */
