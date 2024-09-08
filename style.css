@@ -85,13 +85,15 @@ label {
 .divButton {
   margin: 4px;
   width: 220px;
+  height: 70px;
   border: 1px solid var(--clr-border);
 	border-radius: 5px;
   box-shadow: 1px 1px 1px 1px var(--clr-shadow);
 	background-color: var(--clr-bg);
   float: left;
   text-align: right;
-  display: flex;
+  position: relative;
+  cursor: pointer;
 }
 
 .divButton:hover {
@@ -101,9 +103,10 @@ label {
 .linkName {
   color: var(--clr-fg);
 	font-family: 'Inter', sans-sarif;
-  position: relative;
+  position: absolute;
   right: 10px;
   top: 40px;
+  cursor: pointer;
 }
 
 /* Weather */
