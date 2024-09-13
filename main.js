@@ -2,7 +2,7 @@ const timeElement = document.querySelector(".time");
 const dateElement = document.querySelector(".date");
 const currentWeather = document.getElementById("currentWeather");
 const forecast = document.getElementById("forecast");
-const url = 'https://api.open-meteo.com/v1/forecast?latitude=39.3183&longitude=76.4641&current=temperature_2m,is_day,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timeformat=unixtime&timezone=America%2FNew_York';
+const url = 'https://api.open-meteo.com/v1/forecast?latitude=39.3183&longitude=-76.4641&current=temperature_2m,is_day,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timeformat=unixtime&timezone=America%2FNew_York';
 
 function formatTime(date){
 	const hours12 = date.getHours() % 12 || 12;
