@@ -1,0 +1,301 @@
+zero {
+  'CR': '0'
+  'AC': '10'
+  'HP': '3'
+  'Prof': '+2'
+  'Attacks': '1'
+  'Damage': '2'
+}
+
+eigth {
+  CR 1/8
+  AC: 11
+  Hit Points: 9
+  Proficient Ability Bonus: +3
+  Number of Attacks: 1
+  Damage Per Attack: 4
+}
+
+quarter {
+  CR 1/4
+  AC: 11
+  Hit Points: 13
+  Proficient Ability Bonus: +3
+  Number of Attacks: 1
+  Damage Per Attack: 5
+}
+
+---
+
+CR 1/2
+AC: 12
+Hit Points: 22
+Proficient Ability Bonus: +4
+Number of Attacks: 2
+Damage Per Attack: 4
+
+---
+
+CR 1
+AC: 12
+Hit Points: 33
+Proficient Ability Bonus: +5
+Number of Attacks: 2
+Damage Per Attack: 6
+
+---
+
+CR 2
+AC: 13
+Hit Points: 45
+Proficient Ability Bonus: +5
+Number of Attacks: 2
+Damage Per Attack: 9
+
+---
+
+CR 3
+AC: 13
+Hit Points: 65
+Proficient Ability Bonus: +5
+Number of Attacks: 2
+Damage Per Attack: 12
+
+---
+
+CR 4
+AC: 14
+Hit Points: 84
+Proficient Ability Bonus: +6
+Number of Attacks: 2
+Damage Per Attack: 14
+
+---
+
+CR 5
+AC: 15
+Hit Points: 95
+Proficient Ability Bonus: +7
+Number of Attacks: 3
+Damage Per Attack: 12
+
+---
+
+CR 6
+AC: 15
+Hit Points: 112
+Proficient Ability Bonus: +7
+Number of Attacks: 3
+Damage Per Attack: 14
+
+---
+
+CR 7
+AC: 15
+Hit Points: 130
+Proficient Ability Bonus: +7
+Number of Attacks: 3
+Damage Per Attack: 16
+
+---
+
+CR 8
+AC: 15
+Hit Points: 136
+Proficient Ability Bonus: +7
+Number of Attacks: 3
+Damage Per Attack: 18
+
+---
+
+CR 9
+AC: 16
+Hit Points: 145
+Proficient Ability Bonus: +8CR 0
+AC: 10
+Hit Points: 3
+Proficient Ability Bonus: +2
+Number of Attacks: 1
+Damage Per Attack: 2
+
+---
+
+CR 1/8
+AC: 11
+Hit Points: 9
+Proficient Ability Bonus: +3
+Number of Attacks: 1
+Damage Per Attack: 4
+
+---
+
+CR 1/4
+AC: 11
+Hit Points: 13
+Proficient Ability Bonus: +3
+Number of Attacks: 1
+Damage Per Attack: 5
+
+---
+
+CR 1/2
+AC: 12
+Hit Points: 22
+Proficient Ability Bonus: +4
+Number of Attacks: 2
+Damage Per Attack: 4
+
+---
+
+CR 1
+AC: 12
+Hit Points: 33
+Proficient Ability Bonus: +5
+Number of Attacks: 2
+Damage Per Attack: 6
+
+---
+
+CR 2
+AC: 13
+Hit Points: 45
+Proficient Ability Bonus: +5
+Number of Attacks: 2
+Damage Per Attack: 9
+
+---
+
+CR 3
+AC: 13
+Hit Points: 65
+Proficient Ability Bonus: +5
+Number of Attacks: 2
+Damage Per Attack: 12
+
+---
+
+CR 4
+AC: 14
+Hit Points: 84
+Proficient Ability Bonus: +6
+Number of Attacks: 2
+Damage Per Attack: 14
+
+---
+
+CR 5
+AC: 15
+Hit Points: 95
+Proficient Ability Bonus: +7
+Number of Attacks: 3
+Damage Per Attack: 12
+
+---
+
+CR 6
+AC: 15
+Hit Points: 112
+Proficient Ability Bonus: +7
+Number of Attacks: 3
+Damage Per Attack: 14
+
+---
+
+CR 7
+AC: 15
+Hit Points: 130
+Proficient Ability Bonus: +7
+Number of Attacks: 3
+Damage Per Attack: 16
+
+---
+
+CR 8
+AC: 15
+Hit Points: 136
+Proficient Ability Bonus: +7
+Number of Attacks: 3
+Damage Per Attack: 18
+
+---
+
+CR 9
+AC: 16
+Hit Points: 145
+Proficient Ability Bonus: +8
+Number of Attacks: 3
+Damage Per Attack: 22
+
+---
+
+CR 10
+AC: 17
+Hit Points: 155
+Proficient Ability Bonus: +9
+Number of Attacks: 4
+Damage Per Attack: 16
+
+---
+
+CR 11
+AC: 17
+Hit Points: 165
+Proficient Ability Bonus: +9
+Number of Attacks: 4
+Damage Per Attack: 18
+
+---
+
+CR 12
+AC: 17
+Hit Points: 175
+Proficient Ability Bonus: +9
+Number of Attacks: 4
+Damage Per Attack: 19
+
+---
+
+CR 13
+AC: 18
+Hit Points: 184
+Proficient Ability Bonus: +10
+Number of Attacks: 4
+Damage Per Attack: 21
+Number of Attacks: 3
+Damage Per Attack: 22
+
+---
+
+CR 10
+AC: 17
+Hit Points: 155
+Proficient Ability Bonus: +9
+Number of Attacks: 4
+Damage Per Attack: 16
+
+---
+
+CR 11
+AC: 17
+Hit Points: 165
+Proficient Ability Bonus: +9
+Number of Attacks: 4
+Damage Per Attack: 18
+
+---
+
+CR 12
+AC: 17
+Hit Points: 175
+Proficient Ability Bonus: +9
+Number of Attacks: 4
+Damage Per Attack: 19
+
+---
+
+CR 13
+AC: 18
+Hit Points: 184
+Proficient Ability Bonus: +10
+Number of Attacks: 4
+Damage Per Attack: 21

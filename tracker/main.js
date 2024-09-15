@@ -4,6 +4,11 @@ const addButton = document.getElementById('addPlayer');
 const clearButton = document.getElementById('clearTurn');
 const clearRolls = document.getElementById('clearRolls');
 const playerList = document.getElementById('playerList');
+const round = document.getElementById('round');
+
+let roundNum = 1;
+
+round.innerText = roundNum;
 
 let allPlayers = getPlayers();
 updatePlayers();
@@ -46,6 +51,8 @@ function createPlayerItem(player, playerIndex) {
   const playerRoll = player.roll;
   const playerHp = player.hp;
   const playerNote = player.note;
+
+  round.innerText = roundNum;
 
   Player.innerHTML = `
     <div class='top'>
@@ -108,6 +115,7 @@ clearButton.addEventListener('click', () => {
   allPlayers.forEach((player) => {
     player.completed = false;
   })
+  roundNum++;
   savePlayers();
   updatePlayers();
 })
@@ -117,6 +125,7 @@ clearRolls.addEventListener('click', () => {
     allPlayers.forEach((player) => {
       player.roll = '';
     })
+    roundNum = 1;
     savePlayers();
     updatePlayers();
   }

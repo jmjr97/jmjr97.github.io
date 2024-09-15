@@ -12,6 +12,7 @@
   --clr-border-light: #ccc5b9;
   
   --clr-btn: #eb5e28;
+	font-family: 'Inter', sans-sarif;
 }
 
 body {
@@ -57,6 +58,16 @@ h1 {
 
 #addPlayer:hover {
   color: var(--clr-text-contrast);
+}
+
+.roundTracker {
+  margin: auto;
+  padding: 2px;
+  width: 120px;
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
 }
 
 #clearTurn {
