@@ -5,8 +5,14 @@ const clearButton = document.getElementById('clearTurn');
 const clearRolls = document.getElementById('clearRolls');
 const playerList = document.getElementById('playerList');
 const round = document.getElementById('round');
+const elapMinutes = document.getElementById('min')
+const elapSeconds = document.getElementById('sec')
+const minLabel = document.getElementById('minLabel');
+const roundMin = document.getElementsByClassName('roundMin');
 
 let roundNum = 1;
+let roundSeconds = 0;
+let roundMinutes = 0;
 
 round.innerText = roundNum;
 
@@ -52,7 +58,14 @@ function createPlayerItem(player, playerIndex) {
   const playerHp = player.hp;
   const playerNote = player.note;
 
+  if (roundSeconds >= 60) {
+    roundMinutes++;
+    roundSeconds -= 60;
+  }
+
   round.innerText = roundNum;
+  elapSeconds.innerText = roundSeconds;
+  elapMinutes.innerText = roundMinutes;
 
   Player.innerHTML = `
     <div class='top'>
@@ -116,6 +129,7 @@ clearButton.addEventListener('click', () => {
     player.completed = false;
   })
   roundNum++;
+  roundSeconds += 6;
   savePlayers();
   updatePlayers();
 })
@@ -126,6 +140,8 @@ clearRolls.addEventListener('click', () => {
       player.roll = '';
     })
     roundNum = 1;
+    roundSeconds = 0;
+    roundMinutes = 0;
     savePlayers();
     updatePlayers();
   }

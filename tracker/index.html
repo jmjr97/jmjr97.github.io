@@ -1,29 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Initiative Tracker</title>
-    <link href="style.css" rel="stylesheet">
+    <link href='style.css' rel='stylesheet'>
   </head>
   <body>
-    <div class="container">
+    <div class='container'>
       <h1>Initiative Tracker</h1>
-      <form autocomplete="off">
-        <input type="text" id="playerInput" placeholder="Player name:" tabindex="-1">
-        <button id="addPlayer" tabindex="-1">Add</button>
+      <form autocomplete='off'>
+        <input type='text' id='playerInput' placeholder='Player name:' tabindex='-1'>
+        <button id='addPlayer' tabindex='-1'>Add</button>
       </form>
-      <div class="roundTracker">
-        <label class="roundNum">Round</label>
-        <label class="roundNum" id="round"></label>
+      <div class='roundTracker'>
+        <div class='number'>
+          <label class='roundNum'>Round</label>
+          <label class='roundNum' id='round'></label>
+        </div>
+        <div class='time'>
+          <label id='min'></label>
+          <label>Min :</label>
+          <label id='sec'></label>
+          <label>Sec</label>
+        </div>
       </div>
-      <div class="players">
-      <ul id="playerList">
+      <div class='players'>
+      <ul id='playerList'>
       </ul>
       </div>
-      <button id="clearTurn" tabindex="-1">Clear Turn</button>
-      <button id="clearRolls" tabindex="-1">Clear Rolls</button>
+      <button id='clearTurn' tabindex='-1'>Clear Turn</button>
+      <button id='clearRolls' tabindex='-1'>Clear Rolls</button>
     </div> 
-    <script src="main.js"></script>
+    <script src='main.js'></script>
   </body>
 </html>

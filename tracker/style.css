@@ -63,11 +63,21 @@ h1 {
 .roundTracker {
   margin: auto;
   padding: 2px;
-  width: 120px;
+  width: 400px;
   color: var(--clr-text);
   background-color: var(--clr-bg);
   border: 1px solid var(--clr-border);
   border-radius: 5px;
+}
+
+.number {
+  float: left;
+  margin-left: 5px;
+}
+
+.time {
+  text-align: right;
+  margin-right: 5px;
 }
 
 #clearTurn {
