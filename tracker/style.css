@@ -62,8 +62,9 @@ h1 {
 
 .roundTracker {
   margin: auto;
-  padding: 2px;
-  width: 400px;
+  margin-top: 5px;
+  width: 300px;
+  height: 25px;
   color: var(--clr-text);
   background-color: var(--clr-bg);
   border: 1px solid var(--clr-border);
@@ -72,12 +73,14 @@ h1 {
 
 .number {
   float: left;
-  margin-left: 5px;
+  margin-left: 10px;
+  padding-top: 3px;
 }
 
 .time {
   text-align: right;
-  margin-right: 5px;
+  padding-top: 3px;
+  margin-right: 10px;
 }
 
 #clearTurn {
@@ -121,7 +124,7 @@ h1 {
 }
 
 ul {
-  margin: 0px;
+  margin: auto;
   list-style-type: none;
   width: 390px;
   padding: 0;
