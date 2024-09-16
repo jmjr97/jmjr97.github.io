@@ -13,7 +13,7 @@ function formatTime(date){
 }
 
 function formatDate(date){
-	const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+	const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 	const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "Octobor", "November", "December"];
 
 	return `${DAYS[date.getDay()]}, ${MONTHS[date.getMonth()]} ${date.getDate()} ${date.getFullYear()}`;
@@ -26,7 +26,7 @@ async function getWeather() {
       throw new Error(`Response status: ${response.status})`);
     }
 
-	  const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+	  const DAYS = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
     const d = new Date();
   
     const json = await response.json();
