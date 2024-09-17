@@ -1,0 +1,192 @@
+:root {
+  --clr-page-bg: #24283b;
+  --clr-bg: #fffcf2;
+  --clr-bg-dark: #3b4261;
+  --clr-text-box: #fffcf2;
+  
+  --clr-text: #252422;
+  --clr-text-dim: #ccc5b9;
+  --clr-text-contrast: #fffcf2;
+
+  --clr-border: #252422;
+  --clr-border-light: #ccc5b9;
+  
+  --clr-btn: #eb5e28;
+	font-family: 'Inter', sans-sarif;
+}
+
+body {
+  background-color: var(--clr-page-bg);
+}
+
+h1 {
+  color: var(--clr-text-contrast);
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Boxes */
+
+.container {
+  text-align: center;
+  margin: 20px auto;
+  width: 600px;
+  padding: 10px;
+}
+
+.inputSection {
+  display: flex;
+  margin: auto;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.bodySection {
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+  background-color: var(--clr-bg);
+}
+
+/* Header */
+
+.selectContainer {
+  display: flex;
+  margin: 5px;
+  width: 100px;
+  justify-content: center;
+}
+
+.selectBox {
+  appearance: none;
+  width: 100%;
+  padding: 0 30px 0 15px;
+  color: var(--clr-text);
+  background-color: var(--clr-text-box);
+  border: none;
+  font-size: 16px;
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+}
+
+#nameInput {
+  margin: 5px;
+  width: 250px;
+  padding: 8px;
+  background-color: var(--clr-text-box);
+  border-radius: 5px;
+  border: 1px solid var(--clr-border);
+}
+
+#addEnemy {
+  margin: 5px;
+  background-color: var(--clr-btn);
+  color: var(--clr-text);
+  border: none;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addEnemy:hover {
+  color: var(--clr-text-contrast);
+}
+
+/* Content */
+
+ul {
+  margin: auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  align-self: center;
+  margin: 20px auto;
+  /* padding-top: 15px; */
+  padding-bottom: 5px;
+  width: 95%;
+  border-bottom: 1px solid var(--clr-border-light);
+}
+
+li:last-of-type {
+  border: none;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-evenly;
+}
+
+.label {
+  position: relative;
+}
+
+.textLabel {
+  position: absolute;
+  text-align: center;
+  top: -8px;
+  left: 5px;
+  padding: 0 2px;
+  font-size: 12px;
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+}
+
+.statBox {
+  padding: 5px;
+  width: 50px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+}
+
+.nameBox {
+  padding: 5px;
+  text-indent: 10px;
+  width: 400px;
+  font-size: 16px;
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+}
+
+.noteBox {
+  margin-right: 5px;
+  padding: 5px;
+  width: 500px;
+  font-size: 16px;
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+}
+
+.delete {
+  padding: 5px 10px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: var(--clr-text);
+  background-color: var(--clr-btn);
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: var(--clr-text-contrast);
+}
