@@ -1,8 +1,8 @@
 async function getCR() {
-  const response = await fetch('http://10.0.0.170:8080/cr.json');
-  return await response.json();
+  const response = await fetch('https://jmjr97.github.io/mobspawner/cr.json');
+  const cr =  await response.json();
+  console.log(cr);
 }
 
-const cr = getCR();
+getCR();
 
-console.log(cr);
