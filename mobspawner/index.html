@@ -11,30 +11,32 @@
   <body>
     <div class='container'>
       <h1>Mob Spawner</h1>
-      <div class='inputSection'>
-        <div class='selectContainer'>
-          <select class='selectBox'>
-            <option value='eigth'>1/8</option>
-            <option value='quarter'>1/4</option>
-            <option value='half'>1/2</option>
-            <option value='one'>1</option>
-            <option value='two'>2</option>
-            <option value='three'>3</option>
-            <option value='four'>4</option>
-            <option value='five'>5</option>
-            <option value='six'>6</option>
-            <option value='seven'>7</option>
-            <option value='eight'>8</option>
-            <option value='nine'>9</option>
-            <option value='ten'>10</option>
-            <option value='eleven'>11</option>
-            <option value='twelve'>12</option>
-            <option value='thirteen'>13</option>
-          </select>
+      <form autocomplete='off'>
+        <div class='inputSection'>
+          <div class='selectContainer'>
+            <select class='selectBox'>
+              <option value='eigth'>1/8</option>
+              <option value='quarter'>1/4</option>
+              <option value='half'>1/2</option>
+              <option value='one'>1</option>
+              <option value='two'>2</option>
+              <option value='three'>3</option>
+              <option value='four'>4</option>
+              <option value='five'>5</option>
+              <option value='six'>6</option>
+              <option value='seven'>7</option>
+              <option value='eight'>8</option>
+              <option value='nine'>9</option>
+              <option value='ten'>10</option>
+              <option value='eleven'>11</option>
+              <option value='twelve'>12</option>
+              <option value='thirteen'>13</option>
+            </select>
+          </div>
+          <input type='text' id='nameInput' placeholder='Enemy Name:'>
+          <button id='addEnemy'>Generate Enemy</button>
         </div>
-        <input type='text' id='nameInput' placeholder='Enemy Name:'>
-        <button id='addEnemy'>Generate Enemy</button>
-      </div>
+      </form>
       <div class='bodySection'>
         <ul id='mobList'>
           <li>
