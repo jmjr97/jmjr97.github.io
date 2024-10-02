@@ -1,5 +1,5 @@
 {
-zero: {
+"zero": {
   "CR": "0",,
   "AC": "10",,
   "HP": "3",,
@@ -7,7 +7,7 @@ zero: {
   "Attacks": "1",,
   "Damage": "2",,
 },
-eigth: {
+"eigth": {
   "CR": "1/8",,
   "AC": "11",,
   "HP": "9" ,,
@@ -15,7 +15,7 @@ eigth: {
   "Attacks": "1",,
   "Damage": "4",,
 },
-quarter: {
+"quarter": {
   "CR": "1/4",
   "AC": "11",
   "HP": "13",
@@ -23,7 +23,7 @@ quarter: {
   "Attacks": "1",
   "Damage": "5",
 },
-half: {
+"half": {
   "CR": "1/2",
   "AC": "12",
   "HP": "22",
@@ -31,7 +31,7 @@ half: {
   "Attacks": "2",
   "Damage": "4",
 },
-one: {
+"one": {
   "CR": "1",
   "AC": "12",
   "HP": "33",
@@ -39,7 +39,7 @@ one: {
   "Attacks": "2",
   "Damage": "6",
 },
-two: {
+"two": {
   "CR": "2",
   "AC": "13",
   "HP": "45",
@@ -47,7 +47,7 @@ two: {
   "Attacks": "2",
   "Damage": "9",
 },
-three: {
+"three": {
   "CR": "3",
   "AC": "13",
   "HP": "65",
@@ -55,7 +55,7 @@ three: {
   "Attacks": "2",
   "Damage": "12",
 },
-four: {
+"four": {
   "CR": "4",
   "AC": "14",
   "HP": "84",
@@ -63,7 +63,7 @@ four: {
   "Attacks": "2",
   "Damage": "14",
 },
-five: {
+"five": {
   "CR": "5",
   "AC": "15",
   "HP": "95",
@@ -71,7 +71,7 @@ five: {
   "Attacks": "3",
   "Damage": "12",
 },
-six: {
+"six": {
   "CR": "6",
   "AC": "15",
   "HP": "112",
@@ -79,7 +79,7 @@ six: {
   "Attacks": "3",
   "Damage": "14",
 },
-seven: {
+"seven": {
   "CR": "7",
   "AC": "15",
   "HP": "130",
@@ -87,7 +87,7 @@ seven: {
   "Attacks": "3",
   "Damage": "16",
 },
-eight: {
+"eight": {
   "CR": "8",
   "AC": "15",
   "HP": "136",
@@ -95,7 +95,7 @@ eight: {
   "Attacks": "3",
   "Damage": "18",
 },
-nine: {
+"nine": {
   "CR": "9",
   "AC": "16",
   "HP": "145",
@@ -103,7 +103,7 @@ nine: {
   "Attacks": "3",
   "Damage": "22",
 },
-ten: {
+"ten": {
   "CR": "10",
   "AC": "17",
   "HP": "155",
@@ -111,7 +111,7 @@ ten: {
   "Attacks": "4",
   "Damage": "16",
 },
-eleven: {
+"eleven": {
   "CR": "11",
   "AC": "17",
   "HP": "165",
@@ -119,7 +119,7 @@ eleven: {
   "Attacks": "4",
   "Damage": "18",
 },
-twelve: {
+"twelve": {
   "CR": "12",
   "AC": "17",
   "HP": "175",
@@ -127,7 +127,7 @@ twelve: {
   "Attacks": "4",
   "Damage": "19",
 },
-thirteen: {
+"thirteen": {
   "CR": "13",
   "AC": "18",
   "HP": "184",
