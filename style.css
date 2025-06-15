@@ -27,19 +27,32 @@ h3 {
 	margin: 2px;
 }
 
-h3:hover {
-  color: var(--clr-hover);
-}
-
 label {
-  width: 150px;
+  width: 200px;
   padding: none;
 }
 
-/* Time */
+/* frames */
+.frame {
+	margin: auto;
+	width: 900px;
+	margin-top: 50px;
+}
+
+.left-frame {
+	float: left;
+	width: 325px;
+}
+
+.right-frame {
+	float: right;
+	margin: auto;
+	width: 575px;
+}
+
+/* clock frame */
 .dateTime {
 	margin: auto;
-  margin-top: 5%;
 	width: 300px;
 	height: 130px;
 	font-size: 16px;
@@ -57,35 +70,36 @@ label {
 	font-size: 3em;
 }
 
-/* Image Links */
-.mainImg {
-	margin: 10px;
-	width: 45px;
-	display: block;
-}
-
-.mainDiv {
-	margin: auto;
-  margin-top: 10px;
-  padding: 4px 0;
-	width: 930px;
-	background-color: var(--clr-bg-alt);
-	border-radius: 5px;
-	overflow: hidden;
-	display: grid;
+/* window frames */
+.link-window {
+  position: relative;
+  margin: auto;
+	margin-top: 20px;
+	width: 300px;
+	font-weight: 400;
+  padding-top: 10px;
   border: 1px solid var(--clr-border);
   box-shadow: 1px 1px 1px 1px var(--clr-shadow);
+  border-radius: 5px;
+  background-color: var(--clr-bg-alt);
 }
 
-.buttonSpan {
+.button-span {
+	display: table;
   margin: auto;
 	padding: none;
 }
 
-.divButton {
-  margin: 4px;
-  width: 220px;
-  height: 70px;
+.window-img {
+	margin: 5px;
+	width: 40px;
+	display: block;
+}
+
+.window-button {
+  margin: 10px 5px;
+  width: 50px;
+  height: 50px;
   border: 1px solid var(--clr-border);
 	border-radius: 5px;
   box-shadow: 1px 1px 1px 1px var(--clr-shadow);
@@ -96,118 +110,130 @@ label {
   cursor: pointer;
 }
 
-.divButton:hover {
-  border: 1px solid var(--clr-hover);
+.window-button:hover {
+	border: 1px solid var(--clr-hover);
 }
 
-.linkName {
-  color: var(--clr-fg);
-	font-family: 'Inter', sans-sarif;
-  position: absolute;
-  right: 10px;
-  top: 40px;
-  cursor: pointer;
-}
-
-/* Weather */
-.weather {
-  margin: auto;
-  margin-top: 10px;
-  width: 930px;
-	height: 130px;
-  justify-content: center;
-	color: var(--clr-fg);
-	background-color: var(--clr-bg-alt);
-  border: 1px solid var(--clr-border);
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px 1px var(--clr-shadow);
-	border-radius: 5px;
-  display: flex;
-	font-family: 'Inter', sans-sarif;
-}
-
-.currentWeather {
-  text-align: center;
-  width: 185px;
-  float: left;
-}
-
-.forecast {
-  text-align: center;
-  width: 744px;
-  border-left: 1px solid var(--clr-border);
-}
-
-.weatherDay {
-  margin: auto;
-  padding-top: 10px;
-  text-align: center;
-  width: 186px;
-  height: 130px;
-  float: left;
-}
-
-.weatherText {
-  display: inline-block;
-  margin-bottom: 10px;
-  border-bottom: 1px solid var(--clr-border);
-}
-
-.weatherIcon {
-  width: 70px;
-  height: 70px;
-}
-
-/* Link Container */
-.linkContainer {
-	margin: auto;
-	width: 940px;
-  height: fit-content;
-  justify-items: center;
-	display: block;
-	font-family: 'Inter', sans-sarif;
-}
-
-.linkColumn {
-  margin: auto;
-	width: 290px;
-	float: left;
-	font-weight: 400;
-  padding: 10px 10px;
-}
-
-.linkGroupTop {
-  position: relative;
-  margin: 10px 10px;
-	width: 290px;
-	font-weight: 400;
-  padding: 10px 0;
-  border: 1px solid var(--clr-border);
-  box-shadow: 1px 1px 1px 1px var(--clr-shadow);
-  border-radius: 5px;
-  background-color: var(--clr-bg-alt);
-}
-
-.linkGroup {
-  position: relative;
-  margin: 30px 10px;
-	width: 290px;
-	font-weight: 400;
-  padding: 10px 0;
-  border: 1px solid var(--clr-border);
-  box-shadow: 1px 1px 1px 1px var(--clr-shadow);
-  border-radius: 5px;
-  background-color: var(--clr-bg-alt);
-}
-
-.linkTitle {
+.link-title {
   position: absolute;
   padding: 0 5px;
   top: -12px;
-  left: 10px;
+  left: 45px;
+	text-align: center;
   color: var(--clr-fg);
   background: var(--clr-bg-alt);
   border: 1px solid var(--clr-border);
   border-radius: 5px;
   box-shadow: 1px 1px 1px 1px var(--clr-shadow);
+}
+
+.window-link {
+  margin: 0px 5px;
+	margin-bottom: 5px;
+  width: 130px;
+  border: 1px solid var(--clr-border);
+	border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px var(--clr-shadow);
+	background-color: var(--clr-bg);
+  float: left;
+  text-align: right;
+  position: relative;
+  cursor: pointer;
+}
+
+.window-link:hover {
+  border: 1px solid var(--clr-hover);
+}
+
+.link-img {
+	margin: 10px;
+	width: 75px;
+	display: block;
+}
+
+/* big links */
+.main-links {
+	margin: auto;
+  padding: 8px 0px;
+	width: 550px;
+	background-color: var(--clr-bg-alt);
+	border-radius: 5px;
+	overflow: hidden;
+	display: grid;
+  border: 1px solid var(--clr-border);
+  box-shadow: 1px 1px 1px 1px var(--clr-shadow);
+}
+
+.button-span {
+	display: table;
+  margin: auto;
+	padding: none;
+}
+
+.main-button {
+  margin: 5px;
+  width: 95px;
+  height: 95px;
+  border: 1px solid var(--clr-border);
+	border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px var(--clr-shadow);
+	background-color: var(--clr-bg);
+  float: left;
+  text-align: right;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-button:hover {
+  border: 1px solid var(--clr-hover);
+}
+
+.main-link-box {
+	margin: auto;
+	margin-top: 20px;
+	width: 500px;
+	border: 1px solid var(--clr-border);
+	box-shadow: 1px 1px 1px 1px var(--clr-shadow);
+	border-radius: 5px;
+	background-color: var(--clr-bg-alt);
+}
+
+.main-link-window {
+  position: relative;
+  margin: auto;
+	margin-top: 20px;
+	width: 500px;
+	font-weight: 400;
+  padding-top: 20px;
+}
+
+.main-link-title {
+  position: absolute;
+  padding: 0 5px;
+  top: -12px;
+  left: 145px;
+	text-align: center;
+  color: var(--clr-fg);
+  background: var(--clr-bg-alt);
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px var(--clr-shadow);
+}
+
+.main-window-link {
+  margin: 0px 5px;
+	margin-bottom: 5px;
+  width: 230px;
+  border: 1px solid var(--clr-border);
+	border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px var(--clr-shadow);
+	background-color: var(--clr-bg);
+  float: left;
+  text-align: right;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-window-link:hover {
+  border: 1px solid var(--clr-hover);
 }
