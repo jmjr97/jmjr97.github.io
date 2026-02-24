@@ -1,2 +1,259 @@
 @import url(colors.css);
 
+.t_tracker_outline {
+	background: var(--box);
+	width: 420px;
+	border-radius: 8px;
+	padding: 5px 5px 10px 5px;
+}
+
+.t_tracker_box {
+	width: 400px;
+	margin: auto;
+}
+
+#t_player_input {
+	background: var(--field);
+	color: var(--text);
+	margin: 5px 0;
+	justify-content: space-between;
+	align-items: center;
+	width: 250px;
+	padding: 8px;
+	border: 1px solid var(--field);
+	border-radius: 8px;
+}
+
+#t_player_input:focus {
+	outline: none;
+}
+
+.t_button {
+	background: var(--btn);
+	color: var(--text-dark);
+	width: 100px;
+	padding: 8px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.t_button:hover {
+	color: var(--text);
+}
+
+/* #t_clear_rolls { */
+/* 	margin: 0px 10px; */
+/* } */
+
+.t_round_tracker {
+	margin: auto;
+	margin-top: 5px;
+	width: 300px;
+	height: 25px;
+	background: var(--field);
+	color: var(--text);
+	border: 1px solid var(--field);
+	border-radius: 5px;
+}
+
+.t_number {
+	float: left;
+	margin-left: 10px;
+	padding-top: 3px;
+}
+
+.t_time {
+	text-align: right;
+	margin-right: 10px;
+	padding-top: 3px;
+}
+
+.t_players {
+	margin-top: 10px;
+	width: 400px;
+	background: var(--field);
+	color: var(--text);
+	display: grid;
+	justify-items: center;
+	border-radius: 8px;
+	margin-bottom: 10px;
+
+}
+
+#t_player_list {
+	margin: auto;
+	list-style-type: none;
+	width: 390px;
+	padding: 0;
+}
+
+.t_player_li {
+	margin: 10px 5px;
+	display: block;
+	justify-content: space-between;
+	align-items: center;
+	padding: 3px;
+	padding-bottom: 10px;
+	border-bottom: 1px dotted var(--btn);
+}
+
+.t_player_li:last-of-type {
+	border: none;
+}
+
+.t_done_turn {
+	margin: 10px 0;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border: 1px solid var(--border-soft);
+	border-radius: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.t_done_turn:hover {
+	border: 1px solid var(--btn);
+}
+
+.t_done_turn:checked {
+	background: var(--btn);
+	border: 1px solid var(--field);
+}
+
+.t_done_turn:checked ~ .t_player_name {
+	color: var(--text-dim);
+	text-decoration: line-through;
+}
+
+.t_done_turn:checked ~ .t_labels .t_roll {
+	color: var(--text-dim);
+	border: 1px solid var(--text-dim);
+}
+
+.t_done_turn:checked ~ .t_labels .t_hp {
+	color: var(--text-dim);
+	border: 1px solid var(--text-dim);
+}
+
+.t_done_turn:checked ~ .t_labels .t_title_init {
+	color: var(--text-dim);
+}
+
+.t_done_turn:checked ~ .t_labels .t_title_hp {
+	color: var(--text-dim);
+}
+
+.t_labels {
+	position: relative;
+}
+
+.t_title_init {
+	position: absolute;
+	text-align: center;
+	top: -5px;
+	left: 5px;
+	font-size: 12px;
+	color: var(--text);
+	background: var(--field);
+}
+
+.t_title_hp {
+	position: absolute;
+	text-align: center;
+	top: -5px;
+	left: 10px;
+	font-size: 12px;
+	color: var(--text);
+	background: var(--field);
+}
+
+.t_roll {
+	margin: 5px 0px;
+	display: flex;
+	width: 20px;
+	font-size: 16px;
+	justify-content: center;
+	text-align: center;
+	color: var(--text);
+	background: var(--field);
+	padding: 8px;
+	border: 1px solid var(--border-soft);
+	border-radius: 5px;
+	outline: none;
+}
+
+.t_roll[value=''] {
+	color: var(--button);
+	border: 1px dotted var(--border-dash);
+}
+
+.t_hp {
+	margin: 5px 0;
+	margin-left: 5px;
+	display: flex;
+	width: 28px;
+	font-size: 16px;
+	justify-content: center;
+	text-align: center;
+	background: var(--field);
+	color: var(--text);
+	padding: 8px;
+	border: 1px solid var(--border-soft);
+	border-radius: 5px;
+	outline: none;
+}
+
+.t_hp[value=''] {
+	color: var(--button);
+	border: 1px dotted var(--border-dash);
+}
+
+.t_player_name {
+	margin: 5px 0px;
+	display: flex;
+	width: 60%;
+	align-items: center;
+	color: var(--text);
+	padding: 8px;
+}
+
+.t_delete_player {
+	margin: 5px 0px;
+	background: var(--btn);
+	color: var(--text-dark);
+	padding: 5px 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	height: 35px;
+}
+
+.t_delete:hover {
+	color: var(--text);
+}
+
+.t_note {
+	display: block;
+	width: 100%;
+	border: none;
+	border-top: 1px solid var(--border-soft);
+	background: var(--field);
+	color: var(--text);
+	outline: none;
+}
+
+.t_top {
+	display: flex;
+}
+
+.t_bottom_buttons {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.t_bottom {
+	display: flex;
+}

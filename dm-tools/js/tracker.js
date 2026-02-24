@@ -1,15 +1,15 @@
-const playerForm = document.getElementById('init_form');
-const playerInput = document.getElementById('player_input');
-const addButton = document.getElementById('add_player');
-const clearButton = document.getElementById('clear_turn');
-const clearRolls = document.getElementById('clear_rolls');
-const clearNotes = document.getElementById('clear_notes');
-const playerList = document.getElementById('player_list');
-const round = document.getElementById('round');
-const elapMinutes = document.getElementById('min')
-const elapSeconds = document.getElementById('sec')
-const minLabel = document.getElementById('min_label');
-const roundMin = document.getElementsByClassName('round_min');
+const playerForm = document.getElementById('t_init_form');
+const playerInput = document.getElementById('t_player_input');
+const addButton = document.getElementById('t_add_player');
+const clearButton = document.getElementById('t_clear_turn');
+const clearRolls = document.getElementById('t_clear_rolls');
+const clearNotes = document.getElementById('t_clear_notes');
+const playerList = document.getElementById('t_player_list');
+const round = document.getElementById('t_round');
+const elapMinutes = document.getElementById('t_min')
+const elapSeconds = document.getElementById('t_sec')
+const minLabel = document.getElementById('t_min_label');
+const roundMin = document.getElementsByClassName('t_round_min');
 
 let roundNum = 1;
 let roundSeconds = 0;
@@ -54,7 +54,7 @@ function updatePlayers() {
 function createPlayerItem(player, playerIndex) {
   const playerID = 'player-'+playerIndex;
   const Player = document.createElement('li');
-	Player.classList.add('player_li')
+	Player.classList.add('t_player_li')
   const playerName = player.name;
   const playerRoll = player.roll;
   const playerHp = player.hp;
@@ -70,35 +70,35 @@ function createPlayerItem(player, playerIndex) {
   elapMinutes.innerText = roundMinutes;
 
   Player.innerHTML = `
-    <div class='top'>
-      <input type='checkbox' tabIndex='-1' class='done_turn' id='${playerID}'>
-      <div class='labels'>
-        <label class='title_init'>Init</label>
-        <input type='text' onFocus='this.select()' inputmode='numeric' maxlength='2' class='roll' id='${playerID}' value='${playerRoll}'></input>
+    <div class='t_top'>
+      <input type='checkbox' tabIndex='-1' class='t_done_turn' id='${playerID}'>
+      <div class='t_labels'>
+        <label class='t_title_init'>Init</label>
+        <input type='text' onFocus='this.select()' inputmode='numeric' maxlength='2' class='t_roll' id='${playerID}' value='${playerRoll}'></input>
       </div>
-      <div class='labels'>
-        <label class='title_hp'>Hp</label>
-        <input type='text' onFocus='this.select()' inputmode='numeric' maxlength='3' tabIndex='-1' class='hp' id='${playerID}' value='${playerHp}'></input>
+      <div class='t_labels'>
+        <label class='t_title_hp'>Hp</label>
+        <input type='text' onFocus='this.select()' inputmode='numeric' maxlength='3' tabIndex='-1' class='t_hp' id='${playerID}' value='${playerHp}'></input>
       </div>
-      <label for'${playerID}' class='player_name'>${playerName}</label>
-      <button class='delete_player' tabIndex='-1'>Delete</button>
+      <label for'${playerID}' class='t_player_name'>${playerName}</label>
+      <button class='t_delete_player' tabIndex='-1'>Delete</button>
     </div>
-    <div class='bottom'>
-      <input type='text' placeholder='Notes:' maxlength='46' tabIndex='-1' class='note' id='${playerID}' value='${playerNote}'>
+    <div class='t_bottom'>
+      <input type='text' placeholder='Notes:' maxlength='46' tabIndex='-1' class='t_note' id='${playerID}' value='${playerNote}'>
     </div>
   `
-  const deletePlayer = Player.querySelector('.delete_player');
+  const deletePlayer = Player.querySelector('.t_delete_player');
   deletePlayer.addEventListener('click', () => {
   deletePlayerItem(playerIndex);
   })  
 
-  const checkbox = Player.querySelector('.done_turn');
+  const checkbox = Player.querySelector('.t_done_turn');
   checkbox.addEventListener('change', () => {
     allPlayers[playerIndex].completed = checkbox.checked;
     savePlayers();
   })
 
-  const roll = Player.querySelector('.roll');
+  const roll = Player.querySelector('.t_roll');
   roll.addEventListener('change', () => {
     allPlayers[playerIndex].roll = roll.value;
     allPlayers.sort(function(a, b) {
@@ -108,14 +108,14 @@ function createPlayerItem(player, playerIndex) {
     updatePlayers();
   })
 
-  const hp = Player.querySelector('.hp');
+  const hp = Player.querySelector('.t_hp');
   hp.addEventListener('change', () => {
     allPlayers[playerIndex].hp = hp.value;
     savePlayers();
     updatePlayers();
   })
 
-  const note = Player.querySelector('.note');
+  const note = Player.querySelector('.t_note');
   note.addEventListener('change', () => {
     allPlayers[playerIndex].note = note.value;
     savePlayers();

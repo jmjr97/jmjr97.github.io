@@ -1,7 +1,7 @@
-const formEntry = document.getElementById('enemy_form');
-const combatRating = document.getElementById('cr_select');
-const nameInput = document.getElementById('enemy_name');
-const mobList = document.getElementById('mob_list');
+const formEntry = document.getElementById('m_enemy_form');
+const combatRating = document.getElementById('m_cr_select');
+const nameInput = document.getElementById('m_enemy_name');
+const mobList = document.getElementById('m_mob_list');
 // const jsonUrl = 'https://jmjr97.github.io/mobspawner/cr.json';
 let crList = {
   "zero":{ "CR": "0", "AC": "10", "HP": "3", "Prof": "+2", "Attacks": "1", "Damage": "2" },
@@ -63,7 +63,7 @@ formEntry.addEventListener('submit', function(e) {
 
 function createMob(mob, mobIndex) {
   const Mob = document.createElement('li');
-	Mob.classList.add('mob_li')
+	Mob.classList.add('m_mob_li')
   const mobName = mob.name;
   const mobCR = mob.cr;
   const mobAC = mob.ac;
@@ -74,102 +74,102 @@ function createMob(mob, mobIndex) {
   const mobNotes = mob.notes;
 
   Mob.innerHTML = `
-    <div class='row'>
-      <div class='label'>
-        <label class='text_label'>Name</label>
-        <input type='text' class='name_box' id='name' maxlength='50' spellcheck='false' value='${mobName}'>
+    <div class='m_row'>
+      <div class='m_label'>
+        <label class='m_text_label'>Name</label>
+        <input type='text' class='m_name_box' id='m_name' maxlength='50' spellcheck='false' value='${mobName}'>
       </div>
-      <button class='delete_enemy'>Delete</button>
+      <button class='m_delete_enemy'>Delete</button>
     </div>
-    <div class='row'>
-      <div class='label'>
-        <label class='text_label'>Armor</label>
-        <input type='text' class='stat_box' id='ac' inputmode='numeric' maxlength='3' value='${mobAC}'>
+    <div class='m_row'>
+      <div class='m_label'>
+        <label class='m_text_label'>Armor</label>
+        <input type='text' class='m_stat_box' id='m_ac' inputmode='numeric' maxlength='3' value='${mobAC}'>
       </div>
-      <div class='label'>
-        <label class='text_label'>Hp</label>
-        <input type='text' class='stat_box' id='hp' inputmode='numeric' maxlength='3' value='${mobHP}'>
+      <div class='m_label'>
+        <label class='m_text_label'>Hp</label>
+        <input type='text' class='m_stat_box' id='m_hp' inputmode='numeric' maxlength='3' value='${mobHP}'>
       </div>
-      <div class='label'>
-        <label class='text_label'>Cr</label>
-        <input type='text' class='stat_box' id='cr' inputmode='numeric' maxlength='3' value='${mobCR}'>
+      <div class='m_label'>
+        <label class='m_text_label'>Cr</label>
+        <input type='text' class='m_stat_box' id='m_cr' inputmode='numeric' maxlength='3' value='${mobCR}'>
       </div>
-      <div class='label'>
-        <label class='text_label'>Prof</label>
-        <input type='text' class='stat_box' id='prof' inputmode='numeric' maxlength='3' value='${mobProf}'>
+      <div class='m_label'>
+        <label class='m_text_label'>Prof</label>
+        <input type='text' class='m_stat_box' id='m_prof' inputmode='numeric' maxlength='3' value='${mobProf}'>
       </div>
-      <div class='label'>
-        <label class='text_label'>Attacks</label>
-        <input type='text' class='stat_box' id='attacks' inputmode='numeric' maxlength='3' value='${mobAttacks}'>
+      <div class='m_label'>
+        <label class='m_text_label'>Attacks</label>
+        <input type='text' class='m_stat_box' id='m_attacks' inputmode='numeric' maxlength='3' value='${mobAttacks}'>
       </div>
-      <div class='label'>
-        <label class='text_label'>Damage</label>
-        <input type='text' class='stat_box' id='damage' inputmode='numeric' maxlength='3' value='${mobDamage}'>
+      <div class='m_label'>
+        <label class='m_text_label'>Damage</label>
+        <input type='text' class='m_stat_box' id='m_damage' inputmode='numeric' maxlength='3' value='${mobDamage}'>
       </div>
     </div>
-    <div class='row'>
-      <div class='label'>
-        <label class='text_label'>Notes</label>
-        <textarea class='note_box' id='notes' rows='3' maxlength='156' spellcheck='false'>${mobNotes}</textarea>
+    <div class='m_row'>
+      <div class='m_label'>
+        <label class='m_text_label'>Notes</label>
+        <textarea class='m_note_box' id='m_notes' rows='3' maxlength='156' spellcheck='false'>${mobNotes}</textarea>
       </div>
     </div>
 `
 
-  const deleteMob = Mob.querySelector('.delete_enemy');
+  const deleteMob = Mob.querySelector('.m_delete_enemy');
   deleteMob.addEventListener('click', () => {
     deleteMobItem(mobIndex);
   })
 
-  const mobNameBox = Mob.querySelector('#name');
+  const mobNameBox = Mob.querySelector('#m_name');
   mobNameBox.addEventListener('change', () => {
     allMobs[mobIndex].name = mobNameBox.value;
     saveMobs();
     updateMobs();
   })
 
-  const armorBox = Mob.querySelector('#ac');
+  const armorBox = Mob.querySelector('#m_ac');
   armorBox.addEventListener('change', () => {
     allMobs[mobIndex].ac = armorBox.value;
     saveMobs();
     updateMobs();
   })
 
-  const hpBox = Mob.querySelector('#hp');
+  const hpBox = Mob.querySelector('#m_hp');
   hpBox.addEventListener('change', () => {
     allMobs[mobIndex].hp = hpBox.value;
     saveMobs();
     updateMobs();
   })
 
-  const crBox = Mob.querySelector('#cr');
+  const crBox = Mob.querySelector('#m_cr');
   crBox.addEventListener('change', () => {
     allMobs[mobIndex].cr = crBox.value;
     saveMobs();
     updateMobs();
   })
 
-  const profBox = Mob.querySelector('#prof');
+  const profBox = Mob.querySelector('#m_prof');
   profBox.addEventListener('change', () => {
     allMobs[mobIndex].prof = profBox.value;
     saveMobs();
     updateMobs();
   })
 
-  const attacksBox = Mob.querySelector('#attacks');
+  const attacksBox = Mob.querySelector('#m_attacks');
   attacksBox.addEventListener('change', () => {
     allMobs[mobIndex].attacks = attacksBox.value;
     saveMobs();
     updateMobs();
   })
 
-  const damageBox = Mob.querySelector('#damage');
+  const damageBox = Mob.querySelector('#m_damage');
   damageBox.addEventListener('change', () => {
     allMobs[mobIndex].damage = damageBox.value;
     saveMobs();
     updateMobs();
   })
 
-  const note_box = Mob.querySelector('.note_box');
+  const note_box = Mob.querySelector('.m_note_box');
   note_box.addEventListener('change', () => {
     allMobs[mobIndex].notes = note_box.value;
     saveMobs();

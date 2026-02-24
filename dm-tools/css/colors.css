@@ -1,11 +1,11 @@
 :root {
-	--page-bg: #1e1e2e;
-	--container: #24273a;
+	--page-bg: #181825;
 	--box: #24273a;
-	--border: #252422;
-	--border-light: #b8c0e0;
-	--border-dash: #ed8796;
 	--field: #1e1e2e;
+	--border: #b8c0e0;
+	--border-soft: #8087a2;
+	--border-dark: #252422;
+	--border-dash: #ed8796;
 	--text: #cad3f5;
 	--text-dim: #494d64;
 	--text-dark: #1e1e2e;

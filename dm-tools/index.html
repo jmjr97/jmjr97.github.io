@@ -7,71 +7,128 @@
 	</head>
 	<body>
 		<div class='page-container'>
-			<!-- <h1>Dm Tools</h1> -->
-			<!-- Initiative tracker -->
-			<div class='tracker_box'>
-				<div class='tracker'>
-					<h2>Initiative Tracker</h2>
-					<form id='init_form' autocomplete='off'>
-						<input type='text' id='player_input' placeholder='Player Name:' tabindex='-1'>
-						<button id='add_player' tabindex='-1'>Add</button>
-					</form>
-					<div class='round_tracker'>
-						<div class='number'>
-							<label class='round_number'>Round</label>
-							<label class='round_number' id='round'></label>
-						</div>
-						<div class='time'>
-							<label id='min'></label>
-							<label>Min :</label>
-							<label id='sec'></label>
-							<label>Sec</label>
-						</div>
-					</div>
-					<div class='players'>
-						<ul id='player_list'>
-						</ul>
-					</div>
-					<button id='clear_turn' tabindex='-1'>Clear Turn</button>
-					<button id='clear_rolls' tabindex='-1'>Clear Rolls</button>
-					<button id='clear_notes' tabindex='-1'>Clear Notes</button>
+			<div class='dm-notes'>
+				<div class='note-div'>
+					<textarea class='n_note_boxes' id='n_left_note_box' rows="8" cols='60' placeholder='Notes...'></textarea>
+					<textarea class='n_note_boxes' id='n_right_note_box' rows="8" cols='60' placeholder='Notes...'></textarea>
 				</div>
 			</div>
-			<div class='mob_spawner'>
-				<h2>Mob Spawner</h2>
-				<form id='enemy_form' autocomplete='off'>
-					<div class='mob_input'>
-						<div class='select_container'>
-							<select id='cr_select' class='select_box'>
-								<option value='eighth'>1/8</option>
-								<option value='quarter'>1/4</option>
-								<option value='half'>1/2</option>
-								<option value='one'>1</option>
-								<option value='two'>2</option>
-								<option value='three'>3</option>
-								<option value='four'>4</option>
-								<option value='five'>5</option>
-								<option value='six'>6</option>
-								<option value='seven'>7</option>
-								<option value='eight'>8</option>
-								<option value='nine'>9</option>
-								<option value='ten'>10</option>
-								<option value='eleven'>11</option>
-								<option value='twelve'>12</option>
-								<option value='thirteen'>13</option>
-							</select>
+			<div class='column-container'>
+				<div class='left-column'>
+					<div class='t_tracker_outline'>
+						<div class='t_tracker_box'>
+							<h2>Initiative Tracker</h2>
+							<form id='t_init_form' autocomplete='off'>
+								<input type='text' id='t_player_input' placeholder='Player Name:' tabindex='-1'>
+								<button class='t_button' id='t_add_player' tabindex='-1'>Add</button>
+							</form>
+							<div class='t_round_tracker'>
+								<div class='t_number'>
+									<label class='t_round_number'>Round</label>
+									<label class='t_round_number' id='t_round'></label>
+								</div>
+								<div class='t_time'>
+									<label id='t_min'></label>
+									<label>Min :</label>
+									<label id='t_sec'></label>
+									<label>Sec</label>
+								</div>
+							</div>
+							<div class='t_players'>
+								<ul id='t_player_list'>
+								</ul>
+							</div>
+							<div class='t_bottom_buttons'>
+								<button class='t_button' id='t_clear_turn' tabindex='-1'>Clear Turn</button>
+								<button class='t_button' id='t_clear_rolls' tabindex='-1'>Clear Rolls</button>
+								<button class='t_button' id='t_clear_notes' tabindex='-1'>Clear Notes</button>
+							</div>
 						</div>
-						<input type='text' id='enemy_name' placeholder='Enemy Name:'>
-						<button id='add_enemy'>Generate</button>
 					</div>
-				</form>
-				<div class='body_section'>
-					<ul id='mob_list'>
-					</ul>
+				</div>
+				<div class='center-column'>
+					<div class='m_mob_spawner'>
+						<h2>Mob Spawner</h2>
+						<form id='m_enemy_form' autocomplete='off'>
+							<div class='m_mob_input'>
+								<div class='m_select_container'>
+									<select id='m_cr_select' class='m_select_box'>
+										<option value='eighth'>1/8</option>
+										<option value='quarter'>1/4</option>
+										<option value='half'>1/2</option>
+										<option value='one'>1</option>
+										<option value='two'>2</option>
+										<option value='three'>3</option>
+										<option value='four'>4</option>
+										<option value='five'>5</option>
+										<option value='six'>6</option>
+										<option value='seven'>7</option>
+										<option value='eight'>8</option>
+										<option value='nine'>9</option>
+										<option value='ten'>10</option>
+										<option value='eleven'>11</option>
+										<option value='twelve'>12</option>
+										<option value='thirteen'>13</option>
+									</select>
+								</div>
+								<input type='text' id='m_enemy_name' placeholder='Enemy Name:'>
+								<button id='m_add_enemy'>Generate</button>
+							</div>
+						</form>
+						<div class='m_body_section'>
+							<ul id='m_mob_list'>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class='right-column'>
+					<div class='d_roller_box'>
+						<h2>Dice Roller</h2>	
+						<div class='d_dice_box'>
+							<form class='d_dice_input'>
+								<div class='d_dice_row'>
+									<label class='d_dice_label' for='d20'>D20:</label>
+									<input type='number' class='d_dice_number' id='d_d20_input'  name='d20' min='0' max='50' value=0>
+									<label class='d_dice_label' for='d12'>D12:</label>
+									<input type='number' class='d_dice_number' id='d_d12_input' name='d12' min='0' max='50' value=0>
+									<label class='d_dice_label' for='d10'>D10:</label>
+									<input type='number' class='d_dice_number' id='d_d10_input' name='d10' min='0' max='50' value=0>
+								</div>
+								<div class='d_dice_row'>
+									<label class='d_dice_label' for='d8'>D8:</label>
+									<input type='number' class='d_dice_number' id='d_d8_input' name='d8' min='0' max='50' value=0>
+									<label class='d_dice_label' for='d6'>D6:</label>
+									<input type='number' class='d_dice_number' id='d_d6_input' name='d6' min='0' max='50' value=0>
+									<label class='d_dice_label' for='d4'>D4:</label>
+									<input type='number' class='d_dice_number' id='d_d4_input' name='d4' min='0' max='50' value=0>
+								</div>
+							</form>
+							<div class='d_dice_result_box'>
+								<div class='d_result_row'>
+									<label class='d_result_label'>Dice Selected</label>
+									<input type='text' class='d_result_value' id='d_dice_selected' maxlength='50' spellcheck='false' value=''>
+								</div>
+								<div class='d_result_row'>
+									<label class='d_result_label'>Dice Rolls</label>
+									<input type='text' class='d_result_value' id='d_dice_rolls' maxlength='50' spellcheck='false' value=''>
+								</div>
+								<div class='d_result_row'>
+									<label class='d_result_label'>Roll Total</label>
+									<input type='text' class='d_result_value' id='d_dice_total' maxlength='50' spellcheck='false' value=''>
+								</div>
+							</div>
+							<div class='d_dice_button'>
+								<button class='d_button' id='d_clear_dice' tabindex='-1'>Reset Dice</button>
+								<button class='d_button' id='d_calculate_dice' tabindex='-1'>Roll Dice</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+		<script src='js/notes.js'></script>
 		<script src='js/tracker.js'></script>
-		<script src='js/mobs.js'></script>
+		<script src='js/spawner.js'></script>
+		<script src='js/dice.js'></script>
 	</body>
 </html>

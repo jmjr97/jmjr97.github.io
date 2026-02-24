@@ -1,0 +1,18 @@
+@import url(colors.css);
+
+.note-div {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.n_note_boxes {
+	padding: 5px;
+	background-color: var(--field);
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	color: var(--text);
+	outline: none;
+	resize: none;
+}

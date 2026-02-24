@@ -1,36 +1,44 @@
 @import url(colors.css);
+@import url(notes.css);
+@import url(tracker.css);
+@import url(spawner.css);
+@import url(dice.css);
 
 * {
-	font-family: 'Inter', sans-sarif;
+	font-family: 'Noto Sans', sans-sarif;
 }
 
 body {
 	background: var(--page-bg);
-	color: var(--text);
 }
 
 .page-container {
-	/* background: var(--border); */
-	text-align: center;
-	width: 1100px;
-	margin: 20px auto;
-	padding: 10px;
-	border-radius: 12px;
-	display: flex;
+	display: block;
+	justify-content: center;
 }
 
-.tracker_box {
-	background: var(--box);
-	width: 420px;
-	border-radius: 8px;
-	margin: 20px auto;
-	padding: 5px 0px 10px 0px;
+.column-container {
+	display: flex;
+	margin: 20px 0px;
+	justify-content: center;
+	gap: 20px;
+}
+
+.dm-notes {
+	margin: 20px 0px;
 	height: max-content;
 }
 
-.tracker {
-	width: 400px;
-	margin: auto;
+.left-column {
+	height: max-content;
+}
+
+.center-column {
+	height: max-content;
+}
+
+.right-column {
+	height: max-content;
 }
 
 h1 {
@@ -39,401 +47,5 @@ h1 {
 
 h2 {
 	color: #8aadf4;
-}
-
-textarea:focus {
-  outline: none;
-}
-
-textarea {
-  resize: none;
-}
-
-#player_input {
-	background: var(--field);
-	color: var(--text);
-	margin: 5px 0;
-	justify-content: space-between;
-	align-items: center;
-	width: 250px;
-	padding: 8px;
-	border: 1px solid var(--page-bg);
-	border-radius: 8px;
-}
-
-#player_input:focus {
-	outline: none;
-}
-
-button {
-	background: var(--btn);
-	color: var(--text-dark);
-	width: 100px;
-	padding: 8px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-button:hover {
-	color: var(--text);
-}
-
-#clear_rolls {
-	margin: 0px 10px;
-}
-
-.round_tracker {
-	margin: auto;
-	margin-top: 5px;
-	width: 300px;
-	height: 25px;
-	background: var(--field);
-	color: var(--text);
-	border: 1px solid var(--page-bg);
-	border-radius: 5px;
-}
-
-.number {
-	float: left;
-	margin-left: 10px;
-	padding-top: 3px;
-}
-
-.time {
-	text-align: right;
-	margin-right: 10px;
-	padding-top: 3px;
-}
-
-.players {
-	margin-top: 10px;
-	width: 400px;
-	background: var(--page-bg);
-	color: var(--text);
-	display: grid;
-	justify-items: center;
-	border-radius: 8px;
-	margin-bottom: 10px;
-
-}
-
-#player_list {
-	margin: auto;
-	list-style-type: none;
-	width: 390px;
-	padding: 0;
-}
-
-.player_li {
-	margin: 10px 5px;
-	display: block;
-	justify-content: space-between;
-	align-items: center;
-	padding: 3px;
-	padding-bottom: 10px;
-	border-bottom: 1px dotted var(--btn);
-}
-
-li:last-of-type {
-	border: none;
-}
-
-.done_turn {
-	margin: 10px 0;
-	appearance: none;
-	width: 25px;
-	height: 25px;
-	border: 1px solid var(--border-light);
-	border-radius: 5px;
-	margin-right: 5px;
-	cursor: pointer;
-}
-
-.done_turn:hover {
-	border: 1px solid var(--btn);
-}
-
-.done_turn:checked {
-	background: var(--btn);
-	border: 1px solid var(--page-bg);
-}
-
-.done_turn:checked ~ .player_name {
-	color: var(--text-dim);
-	text-decoration: line-through;
-}
-
-.done_turn:checked ~ .labels .roll {
-	color: var(--text-dim);
-	border: 1px solid var(--text-dim);
-}
-
-.done_turn:checked ~ .labels .hp {
-	color: var(--text-dim);
-	border: 1px solid var(--text-dim);
-}
-
-.done_turn:checked ~ .labels .title_init {
-	color: var(--text-dim);
-}
-
-.done_turn:checked ~ .labels .title_hp {
-	color: var(--text-dim);
-}
-
-.labels {
-	position: relative;
-}
-
-.title_init {
-	position: absolute;
 	text-align: center;
-	top: -5px;
-	left: 5px;
-	font-size: 12px;
-	color: var(--text);
-	background: var(--page-bg);
-}
-
-.title_hp {
-	position: absolute;
-	text-align: center;
-	top: -5px;
-	left: 10px;
-	font-size: 12px;
-	color: var(--text);
-	background: var(--page-bg);
-}
-
-.roll {
-	margin: 5px 0px;
-	display: flex;
-	width: 20px;
-	font-size: 16px;
-	justify-content: center;
-	text-align: center;
-	color: var(--text);
-	background: var(--page-bg);
-	padding: 8px;
-	border: 1px solid var(--border-light);
-	border-radius: 5px;
-	outline: none;
-}
-
-.roll[value=''] {
-	color: var(--button);
-	border: 1px dotted var(--border-dash);
-}
-
-.hp {
-	margin: 5px 0;
-	margin-left: 5px;
-	display: flex;
-	width: 28px;
-	font-size: 16px;
-	justify-content: center;
-	text-align: center;
-	background: var(--page-bg);
-	color: var(--text);
-	padding: 8px;
-	border: 1px solid var(--border-light);
-	border-radius: 5px;
-	outline: none;
-}
-
-.hp[value=''] {
-	color: var(--button);
-	border: 1px dotted var(--border-dash);
-}
-
-.player_name {
-	margin: 5px 0px;
-	display: flex;
-	width: 60%;
-	align-items: center;
-	color: var(--text);
-	padding: 8px;
-}
-
-.delete_player {
-	margin: 5px 0px;
-	background: var(--btn);
-	color: var(--text-dark);
-	padding: 5px 10px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	height: 35px;
-}
-
-.delete:hover {
-	color: var(--text);
-}
-
-.note {
-	display: block;
-	width: 100%;
-	border: none;
-	border-top: 1px solid var(--border-light);
-	background: var(--page-bg);
-	color: var(--text);
-	outline: none;
-}
-
-.top {
-	display: flex;
-}
-
-.bottom {
-	display: flex;
-}
-
-/* mob spawner */
-.mob_spawner {
-	background: var(--box);
-	width: 600px;
-	border-radius: 8px;
-	margin: 20px auto;
-	padding: 5px 0px 10px 0px;
-	height: max-content;
-}
-
-.mob_input {
-  display: flex;
-  margin: auto;
-  margin-bottom: 10px;
-  justify-content: center;
-}
-
-.select_container {
-	display: flex;
-	margin: 5px;
-	width: 100px;
-	justify-content: center;
-}
-
-#enemy_name {
-	background: var(--field);
-	color: var(--text);
-	margin: 5px 0;
-	justify-content: space-between;
-	align-items: center;
-	width: 250px;
-	padding: 8px;
-	border: 1px solid var(--page-bg);
-	border-radius: 8px;
-}
-
-#enemy_name:focus {
-	outline: none;
-}
-
-.select_box {
-  appearance: none;
-	width: 100%;
-  color: var(--clr-text);
-  background-color: var(--page-bg);
-  border: none;
-  font-size: 16px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-	/* width: 50px; */
-	text-align: center;
-}
-
-#add_enemy {
-  margin: 5px;
-  background-color: var(--btn);
-  color: var(--text-dark);
-  border: none;
-  padding: 8px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#add_enemy:hover {
-	color: var(--text);
-}
-
-.body_section {
-	width: 95%;
-	margin: auto;
-	padding-top: 5px;
-  border-radius: 8px;
-  background-color: var(--page-bg);
-}
-
-#mob_list {
-  margin: auto;
-  padding: 0;
-	list-style-type: none;
-}
-
-.mob_li {
-  margin: 20px auto;
-  padding-bottom: 5px;
-  border-bottom: 1px dotted var(--btn);
-}
-
-.mob_li:last-of-type {
-  border: none;
-}
-
-.row {
-  display: flex;
-	margin: auto;
-	width: 95%;
-  margin-bottom: 10px;
-  justify-content: space-evenly;
-}
-
-.label {
-  position: relative;
-}
-
-.text_label {
-  position: absolute;
-  text-align: center;
-  top: -8px;
-  left: 5px;
-  padding: 0 2px;
-  font-size: 12px;
-  color: var(--text);
-  background-color: var(--page-bg);
-}
-
-.stat_box {
-  padding: 5px;
-  width: 50px;
-  text-align: center;
-  font-size: 16px;
-  border: 1px solid var(--border-light);
-  border-radius: 5px;
-  color: var(--text);
-  background-color: var(--page-bg);
-}
-
-.name_box {
-	/* margin-right: 10px; */
-  padding: 5px;
-  text-indent: 10px;
-  width: 350px;
-  font-size: 16px;
-  border: 1px solid var(--border-light);
-  border-radius: 5px;
-  color: var(--text);
-  background-color: var(--page-bg);
-}
-
-.note_box {
-  margin-right: 5px;
-  padding: 5px;
-  width: 500px;
-  font-size: 16px;
-  border: 1px solid var(--border-light);
-  border-radius: 5px;
-  color: var(--text);
-  background-color: var(--page-bg);
 }
