@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8'>
+		<title>Dm Tools</title>
+		<link href='css/style.css' rel='stylesheet'>
+	</head>
+	<body>
+		<div class='page-container'>
+			<!-- <h1>Dm Tools</h1> -->
+			<!-- Initiative tracker -->
+			<div class='tracker_box'>
+				<div class='tracker'>
+					<h2>Initiative Tracker</h2>
+					<form id='init_form' autocomplete='off'>
+						<input type='text' id='player_input' placeholder='Player Name:' tabindex='-1'>
+						<button id='add_player' tabindex='-1'>Add</button>
+					</form>
+					<div class='round_tracker'>
+						<div class='number'>
+							<label class='round_number'>Round</label>
+							<label class='round_number' id='round'></label>
+						</div>
+						<div class='time'>
+							<label id='min'></label>
+							<label>Min :</label>
+							<label id='sec'></label>
+							<label>Sec</label>
+						</div>
+					</div>
+					<div class='players'>
+						<ul id='player_list'>
+						</ul>
+					</div>
+					<button id='clear_turn' tabindex='-1'>Clear Turn</button>
+					<button id='clear_rolls' tabindex='-1'>Clear Rolls</button>
+					<button id='clear_notes' tabindex='-1'>Clear Notes</button>
+				</div>
+			</div>
+			<div class='mob_spawner'>
+				<h2>Mob Spawner</h2>
+				<form id='enemy_form' autocomplete='off'>
+					<div class='mob_input'>
+						<div class='select_container'>
+							<select id='cr_select' class='select_box'>
+								<option value='eighth'>1/8</option>
+								<option value='quarter'>1/4</option>
+								<option value='half'>1/2</option>
+								<option value='one'>1</option>
+								<option value='two'>2</option>
+								<option value='three'>3</option>
+								<option value='four'>4</option>
+								<option value='five'>5</option>
+								<option value='six'>6</option>
+								<option value='seven'>7</option>
+								<option value='eight'>8</option>
+								<option value='nine'>9</option>
+								<option value='ten'>10</option>
+								<option value='eleven'>11</option>
+								<option value='twelve'>12</option>
+								<option value='thirteen'>13</option>
+							</select>
+						</div>
+						<input type='text' id='enemy_name' placeholder='Enemy Name:'>
+						<button id='add_enemy'>Generate</button>
+					</div>
+				</form>
+				<div class='body_section'>
+					<ul id='mob_list'>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src='js/tracker.js'></script>
+		<script src='js/mobs.js'></script>
+	</body>
+</html>

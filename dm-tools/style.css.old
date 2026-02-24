@@ -1,0 +1,299 @@
+:root {
+  --clr-page-bg: #24283b;
+  --clr-bg: #fffcf2;
+  --clr-bg-dark: #3b4261;
+  --clr-text-box: #fffcf2;
+  
+  --clr-text: #252422;
+  --clr-text-dim: #ccc5b9;
+  --clr-text-contrast: #fffcf2;
+
+  --clr-border: #252422;
+  --clr-border-light: #ccc5b9;
+  
+  --clr-btn: #eb5e28;
+	font-family: 'Inter', sans-sarif;
+}
+
+body {
+  background-color: var(--clr-page-bg);
+}
+
+h1 {
+  color: var(--clr-text-contrast);
+}
+
+a {
+  color: var(--clr-btn);
+  text-decoration: none;
+}
+
+.container {
+  text-align: center;
+  margin: 20px auto;
+  width: 400px;
+  padding: 10px;
+}
+
+#playerInput {
+  margin: 5px 0;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  background-color: var(--clr-text-box);
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid var(--clr-border);
+}
+
+#playerInput:focus {
+  outline: none;
+}
+
+#addPlayer {
+  background-color: var(--clr-btn);
+  color: var(--clr-text);
+  border: none;
+  width: 100px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addPlayer:hover {
+  color: var(--clr-text-contrast);
+}
+
+.roundTracker {
+  margin: auto;
+  margin-top: 5px;
+  width: 300px;
+  height: 25px;
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+}
+
+.number {
+  float: left;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+
+.time {
+  text-align: right;
+  padding-top: 3px;
+  margin-right: 10px;
+}
+
+#clearTurn {
+  margin-top: 10px;
+  background-color: var(--clr-btn);
+  color: var(--clr-text);
+  border: none;
+  width: 180px;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#clearTurn:hover {
+  color: var(--clr-text-contrast);
+}
+
+#clearRolls {
+  margin-top: 10px;
+  background-color: var(--clr-btn);
+  color: var(--clr-text);
+  border: none;
+  width: 180px;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#clearRolls:hover {
+  color: var(--clr-text-contrast);
+}
+.players {
+  margin-top: 10px;
+  width: 400px;
+  background-color: var(--clr-bg);
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  display: grid;
+  justify-items: center;
+}
+
+ul {
+  margin: auto;
+  list-style-type: none;
+  width: 390px;
+  padding: 0;
+}
+
+li {
+  margin: 10px 5px;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+li:last-of-type {
+  border: none;
+}
+
+.doneTurn {
+  margin: 10px 0;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  color: green;
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.doneTurn:hover {
+  border: 1px solid var(--clr-border-light);
+}
+
+.doneTurn:checked {
+  background-color: var(--clr-btn);
+  border: 1px solid var(--clr-border);
+}
+
+.doneTurn:checked ~ .playerName {
+  color: var(--clr-text-dim);
+  text-decoration: line-through;
+}
+
+.doneTurn:checked ~ .labels .roll {
+  color: var(--clr-text-dim);
+  border: 1px solid var(--clr-border-light);
+}
+
+.doneTurn:checked ~ .labels .hp {
+  color: var(--clr-text-dim);
+  border: 1px solid var(--clr-border-light);
+}
+
+.doneTurn:checked ~ .labels .title-init {
+  color: var(--clr-text-dim);
+}
+
+.doneTurn:checked ~ .labels .title-hp {
+  color: var(--clr-text-dim);
+}
+
+.labels {
+  position: relative;
+}
+
+.title-init {
+  position: absolute;
+  text-align: center;
+  top: -5px;
+  left: 5px;
+  font-size: 12px;
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+}
+
+.title-hp {
+  position: absolute;
+  text-align: center;
+  top: -5px;
+  left: 10px;
+  font-size: 12px;
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+}
+
+.roll {
+  margin: 5px 0;
+  display: flex;
+  width: 20px;
+  font-size:16px;
+  justify-content: center;
+  text-align: center;
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+  padding: 8px;
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+  outline: none;
+}
+
+.roll[value=''] {
+  color: var(--clr-btn);
+  border: 1px dashed var(--clr-btn);
+}
+
+.hp {
+  margin: 5px 0;
+  margin-left: 5px;
+  display: flex;
+  width: 28px;
+  font-size:16px;
+  justify-content: center;
+  text-align: center;
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+  padding: 8px;
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+  outline: none;
+}
+
+.hp[value=''] {
+  color: var(--clr-btn);
+  border: 1px dashed var(--clr-btn);
+}
+
+.playerName {
+  margin: 5px 0;
+  display: flex;
+  width: 60%;
+  align-items: center;
+  color: var(--clr-text);
+  padding: 8px;
+}
+
+.delete {
+  margin: 5px 0;
+  background-color: var(--clr-btn);
+  color: var(--clr-text);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 35px;
+  border: none;
+}
+
+.delete:hover {
+  color: var(--clr-text-contrast);
+}
+
+.note {
+  display: block;
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--clr-border-light);
+  background-color: var(--clr-bg);
+  outline: none;
+}
+
+.top {
+  display: flex;
+}
+
+.bottom {
+  display: block;
+}
