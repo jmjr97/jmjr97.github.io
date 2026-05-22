@@ -2,70 +2,80 @@
 	--clr-bg: #222436;
 	--clr-bg-alt: #2f334d;
 	--clr-fg: #c8d3f5;
-	--clr-label: #7aa2f7;
+	--clr-label: #8aadf4;
 	--clr-border: #545c7e;
 	--clr-shadow: #1e1e2e;
-	--clr-hover: #e0af68;
+	--clr-hover: #f5a97f;
 }
 
 body {
 	background-color: var(--clr-bg);
 	background-repeat: no-repeat;
-	margin: 0;
-	padding: 0;
 }
 
-#header-bg {
-	background: var(--clr-bg-alt);
-	padding-top: 10px;
-}
-
-#header-frame {
+/* frames */
+.frame {
 	margin: auto;
-	width: fit-content;
-	display: grid;
-	grid-auto-flow: column;
+	margin-top: 30px;
 }
 
-#date-time-temp {
-	width: fit-content;
+.header {
+	margin: auto;
+	width: 800px;
+	height: 130px;
+	font-size: 16px;
+	text-align: center;
 	color: var(--clr-fg);
-	justify-items: center;
-	display: grid;
-	grid-template-columns: 250px 110px;
-	grid-template-rows: 80px 30px;
+	background: var(--clr-bg-alt);
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px 1px var(--clr-shadow);
+	display: flex;
+	flex-direction: row;
+}
+
+.dateTime {
+	width: 280px;
+	padding: 0 20px;
+	height: 130px;
+	font-size: 16px;
+	text-align: center;
 	font-family: "Inter", sans-sarif;
 }
 
-/* .time-box { */
-/* 	display: flex; */
-/* 	flex-direction: column; */
-/* 	justify-content: flex-end; */
-/* } */
-
-#time {
-	margin: auto;
-	padding-top: .5em;
+.time {
+	margin-top: 24px;
 	font-size: 3em;
 }
 
-.info-text {
-	margin: 0;
-	font-size: 1em;
-	color: var(--clr-fg);
+.h-spacer {
+	width: 240px;
+	height: 130px;
 }
 
+.weather {
+	width: 280px;
+	height: 130px;
+	text-align: center;
+	justify-content: center;
+	font-family: "Inter", sans-sarif;
+	padding-top: 15px;
+}
+
+.weather p {
+	margin: 0;
+}
+
+/* quick link bar */
 .quick-links {
 	display: grid;
 	grid-auto-flow: column;
 	margin: 20px auto;
 	margin-bottom: 10px;
-	margin-left: 20px;
 	padding: 3px;
 	width: fit-content;
 	background: var(--clr-bg-alt);
-	/* border-radius: 5px; */
-	/* box-shadow: 1px 1px 1px 1px var(--clr-shadow); */
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px 1px var(--clr-shadow);
 	overflow: hidden;
 	display: grid;
 }
@@ -75,13 +85,9 @@ body {
 	margin: 10px;
 	width: 60px;
 	height: 60px;
-	transition: filter 0.3s ease;
 }
 
-.quick-link-img:hover {
-	filter: brightness(40%)
-}
-
+/* link windows */
 .columns {
 	display: flex;
 	margin-top: 20px;
